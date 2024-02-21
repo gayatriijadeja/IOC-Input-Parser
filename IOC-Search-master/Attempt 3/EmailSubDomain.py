@@ -1,0 +1,125 @@
+import os
+import re
+import email
+from email import policy
+from email.parser import BytesParser
+from urllib.parse import urlparse
+from bs4 import BeautifulSoup
+
+
+def extract_domains_from_email(email_filename, output_domains_filename):
+    with open(email_filename, "rb") as file:
+        msg = BytesParser(policy=policy.default).parse(file)
+
+    domains = set()
+    emails = set()
+    process_part(msg, domains, emails)
+
+    filtered_domains = set()
+    for domain in domains:
+        if not any(
+            domain.endswith(ext)
+            for ext in [
+                ".lnk",
+                ".pdf",
+                ".exe",
+                ".zip",
+                ".jpg",
+                ".png",
+                ".LNK",
+                ".PDF",
+                ".EXE",
+                ".ZIP",
+                ".JPG",
+                ".PNG",
+                ".GOV",
+                ".GOV.IN",
+                ".gov",
+                ".gov.in",
+            ]
+        ):
+            filtered_domains.add(domain)
+
+    # Extract email domains from email addresses
+    email_domains = {email.split("@")[1] for email in emails}
+    # Remove email domains from filtered domains
+    filtered_domains = filtered_domains - email_domains
+
+    # Remove email domains from email addresses
+    emails = {email.split("@")[0] for email in emails}
+
+    with open(output_domains_filename, "w") as file:
+        for domain in sorted(filtered_domains):
+            file.write(f"{domain}\n")
+
+    # Output the List of emails
+    with open("output_emails.txt", "w") as file:
+        for email in sorted(emails):
+            file.write(f"{email}\n")
+
+
+def process_part(part, domains: set, emails: set):
+    if part.is_multipart():
+        for sub_part in part.iter_parts():
+            process_part(sub_part, domains, emails)
+
+    elif part.get_content_type().startswith("text"):
+        content = part.get_content()  # Extract content
+        domains.update(re.findall(r"\b[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\b", content))
+
+        # Extract email addresses
+        email_addresses = re.findall(
+            r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b", content
+        )
+        for email in email_addresses:
+            emails.add(email)
+
+        # Extract URLs from HTML content
+        if part.get_content_type() == "text/html":
+            soup = BeautifulSoup(content, "html.parser")
+            for link in soup.find_all("a", href=True):
+                href = link["href"]
+                if href.startswith("http"):
+                    try:
+                        url = urlparse(href)
+                        domain = url.netloc
+                        domains.add(domain)
+                    except Exception as e:
+                        pass
+
+    elif part.get_content_type().startswith("application/octet-stream"):
+        try:
+            filename = part.get_filename()
+            if filename and not any(
+                filename.endswith(ext)
+                for ext in [
+                    ".lnk",
+                    ".pdf",
+                    ".exe",
+                    ".zip",
+                    ".jpg",
+                    ".png",
+                    ".EXE",
+                    ".LNK",
+                    ".PDF",
+                    ".ZIP",
+                    ".JPG",
+                    ".PNG",
+                    ".GOV",
+                    ".GOV.IN",
+                    ".gov",
+                    ".gov.in",
+                ]
+            ):
+                domains.update(
+                    re.findall(r"\b[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\b", filename)
+                )
+        except Exception as e:
+            pass
+
+
+if __name__ == "__main__":
+    email_filename = ["ioc2.eml", "ioc3.eml", "ioc5.eml"]
+    output_domains_filename = "output_domains.txt"
+
+    extract_domains_from_email(email_filename, output_domains_filename)

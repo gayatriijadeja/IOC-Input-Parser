@@ -1,0 +1,30 @@
+List of IPs:
+103.98.60.55
+01.08.02.23
+192.168.0.81
+127.0.0.1
+192.168.0.5
+172.16.0.1
+
+List of Domains:
+keyserver.pgp.com
+outbound.prl.res.in
+b00dc540ded94c10722a7f503d814f65.squirrel
+mmail.lan.prl.res.in
+prlmail.lan.prl.res.in
+smtp.mailfrom
+ursc.gov.in
+cert-in.org.in
+meity.gov.in
+mprl1.lan.prl.res.in
+mail.prl.res.in
+gmail.com
+header.from
+google.com
+SubmitSearch.event
+cmtx.certin
+mx.google.com
+
+List of URLs:
+https://keyserver.pgp.com/vkd/SubmitSearch.event?SearchCriteria=0x797D4D74]
+

@@ -1,0 +1,2967 @@
+Delivered-To: gayatriba2002@gmail.com
+Received: by 2002:a05:7011:e8b:b0:3a6:3f57:33a1 with SMTP id hx11csp320589mdb;
+        Mon, 5 Feb 2024 21:45:50 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEN9AyKqFj2LlOfBfbQDHmDzL6Cz4O/HefGpqnS6kG4afdybNeT/y0yw1PqoU5ZEiAPIdMQ
+X-Received: by 2002:a05:6a00:9392:b0:6e0:4f60:ab89 with SMTP id ka18-20020a056a00939200b006e04f60ab89mr2006867pfb.20.1707198349517;
+        Mon, 05 Feb 2024 21:45:49 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1707198349; cv=none;
+        d=google.com; s=arc-20160816;
+        b=fsIApw5ZKQrnLE6uV0QFjTLUt/DO47Axdc32ID66avglVO+ZAHLHg2xNetjbrLIYs/
+         F/EHZ2pKsyTJwpTf/q2ZufHHKF6PcKQMfsqeIRx4yiRF96I5g7vlEXj9UHL0CwtICyvI
+         jfWckmJhopWK5trPufjFDQvTJMFWWTphnf8rMakWTq77bhov9j0ENc6SxksDgu+MOL5v
+         D+9lzSv+0oi32PS6w49aG9Gk5NlNt53L0d06eL6hkr8bKkKHvTX4CbXudkef/MEiRbJ3
+         kLeJbgX/nkVFJ1wjqarNad7PAfkHMlExVM6I2CnjZZuT67LxEyacWTYqs+asN7QWRoko
+         MOEQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:user-agent:subject:to:from:message-id:date
+         :dkim-signature;
+        bh=gzokcG4PoMJ+nZWoDvJEpOE1FfSyaqYQS6DtJRwnK5c=;
+        fh=gpHvW+1S0dLcpcU0oav5BOqcaVdyhVZFlH9lNaQYpB8=;
+        b=XnUo3Cz4JCMeyLWrxKyBvgHxLzYjjncj3XcRMSVYvjjMM715uox4bRNkdVa2nOCpXf
+         fR9LN5TjKGQiOEwHvLwPcrNZAzP1vY1KMY8hCqWuYtnkvD7bZnHj8IJ2uXhabBXgj6FL
+         fxGY+wFURN3ML+6672z8STwYyIraX76T54HnAw7p4lF+oTWFko6/QVw8RNtqAwDHXQ/7
+         dO7DDA5WYWyT7oRA6vB18Y0Zth67AiiuBnIkxBSL9ho92JjXYdcmP5lXAWjBx8XQYRGI
+         bx8SYshyZXg/m8BJlXiyA42KNXmKLNAoV5Uo1W8IYe50xWUzG3tK15V4HPpXNS/TzSBz
+         YZCw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@prl.res.in header.s=dkim header.b=rF8QGKGs;
+       spf=pass (google.com: domain of utsavi@prl.res.in designates 103.98.60.55 as permitted sender) smtp.mailfrom=utsavi@prl.res.in;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=prl.res.in
+Return-Path: <utsavi@prl.res.in>
+Received: from outbound.prl.res.in (outbound.prl.res.in. [103.98.60.55])
+        by mx.google.com with ESMTPS id 2-20020a631542000000b005cdc07fbef4si1108946pgv.736.2024.02.05.21.45.47
+        for <gayatriba2002@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 05 Feb 2024 21:45:49 -0800 (PST)
+Received-SPF: pass (google.com: domain of utsavi@prl.res.in designates 103.98.60.55 as permitted sender) client-ip=103.98.60.55;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@prl.res.in header.s=dkim header.b=rF8QGKGs;
+       spf=pass (google.com: domain of utsavi@prl.res.in designates 103.98.60.55 as permitted sender) smtp.mailfrom=utsavi@prl.res.in;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=prl.res.in
+Received: from localhost (localhost [127.0.0.1])
+	by outbound.prl.res.in (Postfix) with ESMTP id CA845343790
+	for <gayatriba2002@gmail.com>; Tue,  6 Feb 2024 11:15:15 +0530 (IST)
+X-Virus-Scanned: amavisd-new at prl.res.in
+Received: from outbound.prl.res.in ([127.0.0.1])
+	by localhost (outbound.prl.res.in [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id l9M1byUcUC4A for <gayatriba2002@gmail.com>;
+	Tue,  6 Feb 2024 11:15:12 +0530 (IST)
+Received: from prlmail.lan.prl.res.in (mprl1.lan.prl.res.in [192.168.0.5])
+	by outbound.prl.res.in (Postfix) with ESMTPS id 8469434377A
+	for <gayatriba2002@gmail.com>; Tue,  6 Feb 2024 11:15:12 +0530 (IST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=prl.res.in; s=dkim;
+	t=1707198312; bh=gzokcG4PoMJ+nZWoDvJEpOE1FfSyaqYQS6DtJRwnK5c=;
+	h=Date:From:To:Subject;
+	b=rF8QGKGs1iEUBrrckF9nAJobL8LEB6qy9VWkM1L95FjBk7g3gv4ZJLzzFFOqoO8pR
+	 oJaxLJlAH0Ue1fetRzpDPnFszAiGixbW7Vq4BZfX4aUG89+feNWjzCybZ+xhE71FQb
+	 NxRxzcjwz9SycFH4Z1go4YOFyQxUDArZbBDnLBSPflX3X0iBCqTwhBATXhEJ0VIVrl
+	 IFExuKMFzUxisvoJ5O1Tyhbx+w1HWbeQhDFC4mAmzi40lD74jFkRcQYIgwOh3hVUgi
+	 JoY7G2JTy9atGp6o1hK5OmUyOTxEWN9JuRBGYFWUVe0+9PZcwnvB52iYZNVXeFTzXy
+	 cKPgycFqtmvMg==
+Received: from mail.prl.res.in (mmail.lan.prl.res.in [192.168.0.81])
+	(Authenticated sender: utsavi)
+	by prlmail.lan.prl.res.in (Postfix) with ESMTPSA id 772CE154A9AA
+	for <gayatriba2002@gmail.com>; Tue,  6 Feb 2024 11:15:12 +0530 (IST)
+Received: from 172.16.0.1 ([172.16.0.1]) by mail.prl.res.in (Horde
+ Framework) with HTTP; Tue, 06 Feb 2024 11:15:12 +0530
+Date: Tue, 06 Feb 2024 11:15:12 +0530
+Message-ID: <20240206111512.Horde.hsO3MBhhr7vgJ-8HtUipReV@mail.prl.res.in>
+From: utsavi@prl.res.in
+To: gayatriba2002@gmail.com
+Subject: Fwd: [Iiip-team] [cyber-security-alerts] Cyber Security Advisory:
+ NCIIPC Advisory 29 Jan 2024 (TLP: AMBER)
+User-Agent: Horde Application Framework 5
+Content-Type: multipart/mixed; boundary="=_ytMAYmo5i9YgINWeFtPKvZs"
+MIME-Version: 1.0
+
+This message is in MIME format.
+
+--=_ytMAYmo5i9YgINWeFtPKvZs
+Content-Type: text/html; charset=utf-8
+Content-Description: HTML Message
+Content-Disposition: inline
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body style="font-family:Arial;font-size:14px"></body></html>
+
+--=_ytMAYmo5i9YgINWeFtPKvZs
+Content-Type: message/rfc822; name="Forwarded Message"
+
+Return-Path: <tejas@prl.res.in>
+X-Original-To: utsavi@prl.res.in
+Delivered-To: utsavi@prl.res.in
+Received: from mail.prl.res.in (mmail.lan.prl.res.in [192.168.0.81])
+	(Authenticated sender: tejas)
+	by prlmail.lan.prl.res.in (Postfix) with ESMTPSA id 8BDF7154A98B
+	for <utsavi@prl.res.in>; Mon, 29 Jan 2024 18:01:53 +0530 (IST)
+Received: from 172.16.0.1
+        (SquirrelMail authenticated user tejas)
+        by mail.prl.res.in with HTTP;
+        Mon, 29 Jan 2024 18:01:53 +0530
+Message-ID: <cfe854dc7cdcba78bb27fc0b819b8d58.squirrel@mail.prl.res.in>
+Date: Mon, 29 Jan 2024 18:01:53 +0530
+Subject: Fwd: [Iiip-team] [cyber-security-alerts] Cyber Security Advisory:
+ NCIIPC Advisory 29	Jan 2024 (TLP: AMBER)
+From: "Tejas N Sarvaiya" <tejas@prl.res.in>
+To: "Sadhu Utsavi Satishkumar" <utsavi@prl.res.in>
+User-Agent: SquirrelMail/
+MIME-Version: 1.0
+Content-Type: multipart/mixed;boundary="----=_20240129180153_14842"
+X-Priority: 3 (Normal)
+Importance: Normal
+
+------=_20240129180153_14842
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: 8bit
+
+Please prepare files.
+
+
+Thanks & Regards,
+Tejas Sarvaiya
+
+===========================================
+Tejas N. Sarvaiya
+
+Deputy Head,
+Computer Networking & Information Technology (CNIT)
+Scientist/Engineer-SF,
+Physical Research Laboratory
+A Unit of Dept. of Space,
+Ahmedabad, India
+Phone : +91-79-2631-4415 (Thaltej)
+Mobile: +91-99988-54358
+E-Mail : tejas@prl.res.in
+-------------------------------------------
+------=_20240129180153_14842
+Content-Type: message/rfc822; name="[Iiip-team] [cyber-security-alerts]
+ [Poc-cmtx-p] [CMTX-P01203403] Hacktivist	campaigns against Indian Cyber
+ Space, TLP: AMBER.msg"
+Content-Transfer-Encoding: 8bit
+Content-Disposition: attachment; filename="[Iiip-team]
+ [cyber-security-alerts] [Poc-cmtx-p] [CMTX-P01203403] Hacktivist	campaigns
+ against Indian Cyber Space, TLP: AMBER.msg"
+
+Return-Path: <iiip-team-bounces@ursc.gov.in>
+X-Original-To: tejas@prl.res.in
+Delivered-To: tejas@prl.res.in
+Received: from inbound.prl.res.in (mnmail.lan.prl.res.in [192.168.0.80])
+	by prlmail.lan.prl.res.in (Postfix) with ESMTPS id C49CB154A98B;
+	Mon, 29 Jan 2024 17:00:04 +0530 (IST)
+Received: from localhost (localhost [127.0.0.1])
+	by inbound.prl.res.in (Postfix) with ESMTP id B36573A3AEC;
+	Mon, 29 Jan 2024 17:00:04 +0530 (IST)
+X-Virus-Scanned: amavisd-new at prl.res.in
+X-Spam-Flag: NO
+X-Spam-Score: 1.49
+X-Spam-Level: *
+X-Spam-Status: No, score=1.49 tagged_above=-999 required=7
+	tests=[BAYES_00=-1.9, DKIM_SIGNED=0.1, DKIM_VALID=-0.1,
+	DKIM_VALID_AU=-0.1, HTML_MESSAGE=0.001, KAM_ACCOUNTPHISH=3.2,
+	MAILING_LIST_MULTI=-1, MIME_HTML_MOSTLY=0.1, MIME_QP_LONG_LINE=0.001,
+	PDS_BAD_THREAD_QP_64=0.999, SPF_PASS=-0.001, SUBJECT_VERY_LONG=0.1,
+	TRACKER_ID=0.1, T_SCC_BODY_TEXT_LINE=-0.01] autolearn=no
+Authentication-Results: inbound.prl.res.in (amavisd-new);
+	dkim=pass (1024-bit key) header.d=ursc.gov.in header.b=MzEA5TPR;
+	dkim=fail (1024-bit key) reason="fail (message has been altered)"
+	header.d=meity.gov.in header.b=2tNda+Ri; dkim=fail (1024-bit key)
+	reason="fail (message has been altered)" header.d=meity.gov.in
+	header.b=oZ6yx51A
+Received: from inbound.prl.res.in ([127.0.0.1])
+	by localhost (inbound.prl.res.in [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id gRrHYXka_3b3; Mon, 29 Jan 2024 16:59:58 +0530 (IST)
+Received: from dns2.ursc.gov.in (dnsbsnl.ursc.gov.in [103.106.183.12])
+	by inbound.prl.res.in (Postfix) with ESMTP id 1B8E13A3AC3;
+	Mon, 29 Jan 2024 16:59:54 +0530 (IST)
+DMARC-Filter: OpenDMARC Filter v1.3.1 inbound.prl.res.in 1B8E13A3AC3
+Authentication-Results: OpenDMARCPRL; dmarc=pass header.from=ursc.gov.in
+Authentication-Results: OpenDMARCPRL; spf=pass smtp.mailfrom=iiip-team-bounces@ursc.gov.in
+Received: from localhost (localhost [127.0.0.1])
+	by services.ursc.dos.gov.in (Postfix) with ESMTP id 93BE2929DDE;
+	Mon, 29 Jan 2024 16:59:53 +0530 (IST)
+DKIM-Filter: OpenDKIM Filter v2.11.0 dns2.ursc.gov.in 96E91C056608
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ursc.gov.in;
+	s=dnsbsnldkim; t=1706527793;
+	bh=IC1Mc7ojWGf3Ug44ZIjlADYdvTB2aNsuBdUvP5QoKpo=;
+	h=Date:To:Subject:List-Id:List-Unsubscribe:List-Post:List-Help:
+	 List-Subscribe:From:Reply-To:From;
+	b=MzEA5TPRo9GO1+bTo/vJrfeA5zYbjCnIK2+wwaz0cU4Rvl6Juxrf+LYtz61iMmup6
+	 nPz/xaAGMrWg8e0ryu/xIsuyGTTO36/HJzdjsEC7nXixDmGXMOXqFdqs0BxTjM/Eyb
+	 s5RKn7I3+86Bjw0We9UOxCp1s7X9OIXAzPU67e9c=
+X-Virus-Scanned: amavisd-new at ursc.gov.in
+Received: from services.ursc.dos.gov.in ([127.0.0.1])
+	by localhost (services.ursc.dos.gov.in [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id QEvVVCGAo5X5; Mon, 29 Jan 2024 16:59:52 +0530 (IST)
+Received: from services.ursc.dos.gov.in (localhost [127.0.0.1])
+	by services.ursc.dos.gov.in (Postfix) with ESMTP id 08E6492A902;
+	Mon, 29 Jan 2024 16:59:48 +0530 (IST)
+X-Original-To: iiip-team@ursc.gov.in
+Delivered-To: iiip-team@ursc.gov.in
+Received: from localhost (localhost [127.0.0.1])
+ by services.ursc.dos.gov.in (Postfix) with ESMTP id 24E63929E2C;
+ Mon, 29 Jan 2024 16:59:45 +0530 (IST)
+X-Virus-Scanned: amavisd-new at ursc.gov.in
+Received: from services.ursc.dos.gov.in ([127.0.0.1])
+ by localhost (services.ursc.dos.gov.in [127.0.0.1]) (amavisd-new, port 10024)
+ with LMTP id QRSaICJ7493t; Mon, 29 Jan 2024 16:59:44 +0530 (IST)
+Received: from dns2.ursc.gov.in (dnserns.ursc.gov.in [172.20.2.58])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by services.ursc.dos.gov.in (Postfix) with ESMTPS id 2F9CA929D9B;
+ Mon, 29 Jan 2024 16:59:44 +0530 (IST)
+Received-SPF: Pass (sender SPF authorized) identity=mailfrom;
+ client-ip=121.244.210.51; helo=mail.isro.gov.in;
+ envelope-from=cyber-security-alerts-bounces@isro.gov.in;
+ receiver=iiip-team@ursc.gov.in 
+DKIM-Filter: OpenDKIM Filter v2.11.0 dns2.ursc.gov.in 4TNmKz2bWbzMswm3
+Authentication-Results: dns2.ursc.gov.in;
+ dkim=fail reason="signature verification failed" (1024-bit key)
+ header.d=meity.gov.in header.i=@meity.gov.in header.b="2tNda+Ri"; 
+ dkim=fail reason="signature verification failed" (1024-bit key)
+ header.d=meity.gov.in header.i=@meity.gov.in header.b="oZ6yx51A"
+Received: from mail.isro.gov.in (mail.isro.gov.in [121.244.210.51])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by dns2.ursc.gov.in (Postfix) with ESMTPS id 4TNmKz2bWbzMswm3;
+ Mon, 29 Jan 2024 16:59:41 +0530 (IST)
+Received: from mail.isro.gov.in (localhost [127.0.0.1])
+ by mail.isro.gov.in (Postfix) with ESMTP id 2E01D1B5CC7;
+ Mon, 29 Jan 2024 16:59:41 +0530 (IST)
+Received: from spacenet-internet-mail-relay.localdomain (unknown [172.16.0.4])
+ by mail.isro.gov.in (Postfix) with ESMTP id 189401AD3FB;
+ Mon, 29 Jan 2024 16:59:41 +0530 (IST)
+Received: from mail.isro.dos.gov.in (mail.isro.org [10.11.1.215])
+ by spacenet-internet-mail-relay.localdomain (Postfix) with ESMTP id 15443B40B7;
+ Mon, 29 Jan 2024 16:59:41 +0530 (IST)
+Received: from mail.isro.dos.gov.in (unknown [127.0.0.1])
+ by mail.isro.dos.gov.in (Postfix) with ESMTP id EF0C28018AAC8;
+ Mon, 29 Jan 2024 16:59:40 +0530 (IST)
+Received: from mailman.isro.gov.in (unknown [10.11.1.211])
+ by mail.isro.dos.gov.in (Postfix) with ESMTP id DC0998018AAD6;
+ Mon, 29 Jan 2024 16:59:40 +0530 (IST)
+Received: from mailman.isro.gov.in (localhost [IPv6:::1])
+ by mailman.isro.gov.in (Postfix) with ESMTP id CD84C1357105;
+ Mon, 29 Jan 2024 16:59:40 +0530 (IST)
+X-Original-To: cyber-security-alerts@mailman.isro.gov.in
+Delivered-To: cyber-security-alerts@mailman.isro.gov.in
+Received: from mail.isro.dos.gov.in (mail.isro.org [10.11.1.215])
+ by mailman.isro.gov.in (Postfix) with ESMTP id 18F0213801D6
+ for <cyber-security-alerts@mailman.isro.gov.in>;
+ Mon, 29 Jan 2024 16:59:39 +0530 (IST)
+Received: by mail.isro.dos.gov.in (Postfix)
+ id 0BAAD8018AAD6; Mon, 29 Jan 2024 16:59:39 +0530 (IST)
+Delivered-To: cyber-security-alerts@isro.gov.in
+Received: from mail.isro.dos.gov.in (unknown [127.0.0.1])
+ by mail.isro.dos.gov.in (Postfix) with ESMTP id E09B28018AAC8;
+ Mon, 29 Jan 2024 16:59:38 +0530 (IST)
+Received: from spacenet-internet-mail-relay.localdomain (unknown [10.11.2.215])
+ by mail.isro.dos.gov.in (Postfix) with ESMTP id CA6518018AAD6;
+ Mon, 29 Jan 2024 16:59:38 +0530 (IST)
+Received: from mail.isro.gov.in (unknown [192.168.0.5])
+ by spacenet-internet-mail-relay.localdomain (Postfix) with ESMTP id C74A3C0219;
+ Mon, 29 Jan 2024 16:59:38 +0530 (IST)
+Received: from localhost (localhost [127.0.0.1])
+ by mail.isro.gov.in (Postfix) with ESMTP id C5121C45AC;
+ Mon, 29 Jan 2024 16:59:38 +0530 (IST)
+X-Virus-Scanned: amavisd-new at isro.gov.in
+Authentication-Results: mail-ingress.isro.gov.in (amavisd-new);
+ dkim=pass (1024-bit key) header.d=meity.gov.in header.b=2tNda+Ri;
+ dkim=pass (1024-bit key) header.d=meity.gov.in header.b=oZ6yx51A
+Received: from mail.isro.gov.in ([127.0.0.1])
+ by localhost (mail-ingress.isro.gov.in [127.0.0.1]) (amavisd-new, port 10024)
+ with ESMTP id bTGfWWHFB2_3; Mon, 29 Jan 2024 16:59:35 +0530 (IST)
+Received: from vastu212.nic.in (vastu212.nic.in [164.100.2.212])
+ by mail.isro.gov.in (Postfix) with ESMTPS id DC16D6E10D;
+ Mon, 29 Jan 2024 16:59:34 +0530 (IST)
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail.isro.gov.in DC16D6E10D
+Authentication-Results: mail.isro.gov.in;
+ dkim=pass (1024-bit key) header.d=meity.gov.in header.i=@meity.gov.in
+ header.b="2tNda+Ri"; 
+ dkim=pass (1024-bit key) header.d=meity.gov.in header.i=@meity.gov.in
+ header.b="oZ6yx51A"
+Received: from blist-relay3.nic.in (localhost.localdomain [127.0.0.1])
+ by blist-relay3.nic.in (Postfix) with ESMTP id C1B8B103E541B;
+ Mon, 29 Jan 2024 16:57:50 +0530 (IST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=meity.gov.in;
+ s=MEITY; t=1706527671;
+ bh=vQyZqdX1L/12nEoALCDtgLlf8paeRf6rK3Y+flAcpeI=;
+ h=Date:From:To:Subject:List-Id:List-Help:List-Post:List-Subscribe:
+ List-Unsubscribe;
+ b=2tNda+Riklv5pP3a7nEcYBiig9ncRWaG7DQxFEauF1tIENXaBsLElUVT9B7I/Hfe4
+ 0O0GE1bzQrVfk7Kei77W1WxbEW39G2YZkwU6YB29j2j28EXtc2E/syEmczQmOKRMFr
+ pBrFjIXpsrb48CKotzZYBg1LAglFYvnQsXZcn1B4=
+Received: from lsmgr.email.gov.in (unknown [192.168.1.254])
+ by blist-relay3.nic.in (Postfix) with ESMTP id 8A9CB10510D1;
+ Mon, 29 Jan 2024 16:57:50 +0530 (IST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=meity.gov.in;
+ s=MEITY; t=1706527670;
+ bh=vQyZqdX1L/12nEoALCDtgLlf8paeRf6rK3Y+flAcpeI=;
+ h=Date:From:To:Subject:List-Id:List-Help:List-Post:List-Subscribe:
+ List-Unsubscribe;
+ b=oZ6yx51ACH61CIa1xrNTg2tR3RVVgUAvAJ3Q3RjkgJDES0ha7aEeiowELM0dF+n7o
+ iY0v2OAtWPdWfAbB6QIehG+pmR9+nJaL2QlnYiX/1Yt7995WWxOooyI7xwz2vGhAiy
+ YGKxqvCL3R1rJVA4DkcMpDZcKeB4sDY4Pyw2JEaY=
+Received: from localhost.localdomain (localhost.localdomain [127.0.0.1])
+ by lsmgr.email.gov.in (Postfix) with ESMTP id 9B5932268F1E;
+ Mon, 29 Jan 2024 16:57:45 +0530 (IST)
+Received: from mailman2.nic.in (unknown [192.168.1.4])
+ by lsmgr.email.gov.in (Postfix) with ESMTP id CD0452268F07
+ for <poc-cmtx-p@lsmgr.email.gov.in>; Mon, 29 Jan 2024 12:28:12 +0530 (IST)
+Received: from esahydvalc15.nic.in ([100.81.27.21])
+ by mailman2.nic.in (8.14.7/8.14.4) with ESMTP id 40T6wCkf006577
+ for <poc-cmtx-p@lsmgr.nic.in>; Mon, 29 Jan 2024 12:28:12 +0530
+IronPort-Data: A9a23:IWwRtap13KH3hwLKnlGWfqs6rNheBmKnZxIvgKrLsJaIsI4StFCzt
+ garIBnUOf6LMGr1KYhwPoTj8R9U7JXXm9RrTVRpqisyECIa9JacVYWSI3mrMnLJJKUvbmo9s
+ Z5GMoGowOPY75P4jk3wWlQ0hSAkjclkYJKiVracUsxWbVY8GHd74f5bs7dlxNQu2bBVOivV0
+ fvqucrTJVS57DB9N2MQ+sqrpQhm1BjIkGpwUmcWO7YT5zcyq1FPVMhEfPjpdCOhKmVpNrXSq
+ 9jrnejRElzxr09F5uONyt7TbkAMS7jOCgmC4lI+t3+K20UqSoQai87XBdJEAatlo23hc+NZk
+ b2hgaeNpTIBZcUgrgiyvy5wSEmSNYUekFPOzOPWXca7lyUqeFO0qxli4d1f0ST1NY+bDEkXn
+ cH0JgzhYTjTvOyk/Yjie9Nrn9kGHpm3P6U9iytZmGSx4fYOGfgvQo3F/dhXw2tpwMZPFrDfY
+ aL1axI2NEyGM0QJYAhRU/rSn8/x7pX7WzZdtELTrqct/2nV5Al80aT8dtXSZJqLQ625m27C+
+ T+YoDuiav0cHN2w+SuOsUDvvPbWtxzaddsUDLK9ycc/1TV/wURWUnX6T2CTuf6yz0W7R8IaM
+ 2QQ4S8ht+409UftT9+VYvGjiCfc5lhMApwKTKthgO2Q9pfpD8+iLjBsZlZ8hBYO7afamRRCO
+ oe1ou7U
+IronPort-HdrOrdr: A9a23:Mjnn4q/XfypgVvorTMRuk+DsI+orL9Y04lQ7vn2ZKCYlFvBw+P
+ rBoB12737JYVUqKRQdcLK7Scq9qBrnnPYfi+V/AV7IZniFhILcFvAa0WKU+UyZJ8SRzI5g/J
+ YlW6x3F93rSXx9gMb04AW0euxM/DD+ytHPuQ6I9QYLcT1X
+X-Talos-CUID: 9a23:cuVEoG9rpy+uuMsHbj2Vvx4vFNIYSCTs9nDJPmqKWTpqbp+kE2bFrQ==
+X-Talos-MUID: 9a23:MZ/BJQrlTzw3p51DvewezzBNBNZjoJbtMlkUu6onlpCCLSN1BA7I2Q==
+X-IronPort-AV: E=McAfee;i="6600,9927,10882"; a="2756773"
+X-IronPort-AV: E=Sophos;i="6.03,273,1694716200"; d="scan'208,217";a="2756773"
+X-Amp-Result: SKIPPED(no attachment in message)
+Received: from unknown (HELO gpogw41.nic.in) ([100.81.27.3])
+ by esahydvalc15.nic.in with ESMTP; 29 Jan 2024 12:54:42 +0530
+Received: from gpogw41.nic.in (localhost [127.0.0.1])
+ by gpogw41.nic.in (Postfix) with ESMTPS id DB62E8437C;
+ Mon, 29 Jan 2024 12:28:09 +0530 (IST)
+Received: from localhost (localhost [127.0.0.1])
+ by gpogw41.nic.in (Postfix) with ESMTP id 6249784372;
+ Mon, 29 Jan 2024 12:28:09 +0530 (IST)
+X-Amavis-Modified: Mail body modified (using disclaimer) - gpogw41.nic.in
+Received: from gpogw41.nic.in ([127.0.0.1])
+ by localhost (gpogw41.nic.in [127.0.0.1]) (amavisd-new, port 10026)
+ with ESMTP id Lq8WDiKAPAS5; Mon, 29 Jan 2024 12:28:09 +0530 (IST)
+Received: from gms045.nic.in (unknown [100.80.16.240])
+ by gpogw41.nic.in (Postfix) with ESMTP id D969B83ADB;
+ Mon, 29 Jan 2024 12:28:01 +0530 (IST)
+Date: Mon, 29 Jan 2024 12:27:47 +0530 (IST)
+To: "alert reply" <alert_reply@cert-in.org.in>
+Message-ID: <212138206.3931009.1706511467275@meity.gov.in>
+MIME-Version: 1.0
+X-Originating-IP: [59.176.167.100, 100.80.16.139]
+X-Mailer: Zimbra 8.8.15_GA_2148 (ZimbraWebClient - GC121 (Win)/8.8.15_GA_2148)
+Thread-Index: GTh5MD6H+kpUm40medjsXN9edO5sfA==
+Thread-Topic: Hacktivist campaigns against Indian Cyber Space, TLP: AMBER
+X-MailFrom: cmtx.certin@meity.gov.in
+X-Mailman-Rule-Hits: nonmember-moderation
+X-Mailman-Rule-Misses: dmarc-mitigation; no-senders; approved; emergency; loop;
+ banned-address; member-moderation
+Message-ID-Hash: JXRVCOY6MUS2OE4D7Z5BVJML5RAXXI2Q
+X-Message-ID-Hash: JXRVCOY6MUS2OE4D7Z5BVJML5RAXXI2Q
+X-Mailman-Approved-At: Mon, 29 Jan 2024 16:57:12 +0530
+X-Mailman-Version: 3.3.1
+Precedence: list
+Content-Type: multipart/mixed; boundary="===============1558906033754317467=="
+X-Virus-Scanned: ClamAV using ClamSMTP
+X-BeenThere: cyber-security-alerts@isro.gov.in
+X-Virus-Scanned: ClamAV using ClamSMTP
+X-Virus-Scanned: ClamAV using ClamSMTP
+Subject: [Iiip-team] [cyber-security-alerts] [Poc-cmtx-p] [CMTX-P01203403]
+	Hacktivist	campaigns against Indian Cyber Space, TLP: AMBER
+X-BeenThere: iiip-team@ursc.gov.in
+List-Id: Iiip team  list <iiip-team.ursc.gov.in>
+List-Unsubscribe: <http://ursc.gov.in/mailman/options/iiip-team>,
+ <mailto:iiip-team-request@ursc.gov.in?subject=unsubscribe>
+List-Post: <mailto:iiip-team@ursc.gov.in>
+List-Help: <mailto:iiip-team-request@ursc.gov.in?subject=help>
+List-Subscribe: <http://ursc.gov.in/mailman/listinfo/iiip-team>,
+ <mailto:iiip-team-request@ursc.gov.in?subject=subscribe>
+From: CMTX-alerts-Cert-In via Iiip-team <iiip-team@ursc.gov.in>
+Reply-To: CMTX-alerts-Cert-In <cmtx.certin@meity.gov.in>
+Errors-To: iiip-team-bounces@ursc.gov.in
+Sender: "Iiip-team" <iiip-team-bounces@ursc.gov.in>
+
+--===============1558906033754317467==
+Content-Type: multipart/alternative;
+	boundary="=_6c03e5aa-68f5-4300-bc58-3d5565c99963"
+
+--=_6c03e5aa-68f5-4300-bc58-3d5565c99963
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+-----BEGIN PGP SIGNED MESSAGE-----=20
+Hash: SHA256=20
+
+[CMTX-P01203403] Hacktivist campaigns against Indian Cyber Space, TLP: AMBE=
+R=20
+META INFORMATION=20
+Confidence- High=20
+Risk- High=20
+TLP- AMBER=20
+- ------------------------------------------------------------------------=
+=20
+NOTE FOR ACTION REPORT:=20
+=E2=80=A2 CERT-IN requires observation/incident reports, if any, pertaining=
+ to the shared alert i.e. SIEM alerts, specific positive hits, malware hash=
+es, threat hunting results in sanitized form within 6 hours to cmtx.certin@=
+meity.gov.in ONLY=20
+=E2=80=A2 Compliance and after action reports and comments on audit observa=
+tions, timings and quality of the alert contents, anomalies observed, false=
+ positives and any other comments can be sent as a Monthly Cumulative Summa=
+ry Report.=20
+=E2=80=A2 CERT-IN Threat Intelligence Platform recipients can share feedbac=
+k anonymously in the form of IOCs/reports to the platform using TAXII INBOX=
+ functionality.=20
+- -------------------------------------------------------------------------=
+---------------=20
+ALERT BRIEF:=20
+As a part of active tracking of hacktivist campaigns against Indian cyber s=
+pace entities, CERT-In has observed that different hacktivist group under #=
+Opindia23 and #OPINDIA campaigns are active and launching DDoS and website =
+defacement attacks against Indian websites and ICT infrastructure. In previ=
+ous attacks, hacktivist groups have gone further by distributing databases =
+containing personally identifiable information (PII), defacing websites, an=
+d asserting the compromise of user accounts.=20
+
+It is also observed that attacker were using recently a DdosPanel, an open =
+source tool for conducting DDoS attacks to perform the DDOS, Exfiltration, =
+or defacement.=20
+https://github.com/dandiers/DdosPanel=20
+
+The hacktivist group found active in recent campaigns are:=20
+
+=E2=80=A2 GARNESIA_TEAM=20
+=E2=80=A2 177 Members Community=20
+=E2=80=A2 SYLHET GANG-SG=20
+=E2=80=A2 Esteem Restoration Eagle=20
+=E2=80=A2 NIXON CYBER TEAM=20
+=E2=80=A2 TEAM R70=20
+=E2=80=A2 Team 1722=20
+=E2=80=A2 ANON BLACK FLAG=20
+=E2=80=A2 THE ANONYMOUS BD=20
+=E2=80=A2 GARUDA FROM CYBER=20
+=E2=80=A2 Esteem Restoration Eagle=20
+=E2=80=A2 ETHERSEC TEAM CYBER=20
+=E2=80=A2 PADANG SYSTEM ERROR=20
+=E2=80=A2 TOXCAR CYBER TEAM=20
+=E2=80=A2 SYLHET GANG-SG=20
+=E2=80=A2 ClaratZ=20
+=E2=80=A2 TEAM CYBER MAFIA=20
+=E2=80=A2 Krypton=20
+
+Mapping of TTPs used by these actors on MITRE ATT&CK Matrix:-=20
+T1491.001 =E2=80=93 internal defacement=20
+T1491.002 =E2=80=93 external defacement=20
+T1498.001 =E2=80=93 Direct Network Flood=20
+T1498.002=E2=80=93 Reflection Amplification=20
+T1586-Compromsied Accounts=20
+
+
+Attack Vectors=20
+Website Defacement=20
+DDoS=20
+Compromised Credentials=20
+Data Exfiltration=20
+
+Previous Hacktivist Alert References:-=20
+[CMTX-P-102023633] [Early Warning] Probable hacktivist campaigns against In=
+dian Cyber Space, TLP: AMBER October 27, 2023=20
+[CMTX-P-102023524] [Early Warning] Probable hacktivist campaigns against In=
+dian Cyber Space, TLP: AMBER October 20, 2023=20
+[CMTX-P-102023523] [Early Warning] Probable hacktivist campaigns against In=
+dian Cyber Space, TLP: AMBER October 11, 2023=20
+[CMTX-P12202406] [Early Warning] Probable hacktivist campaigns against Indi=
+an Cyber Space, TLP: AMBER Dec 08, 2023=20
+
+Best Practices and Recommendation for Mitigation against Website Defacement=
+ and DDOS attack is provided below.=20
+
+Mitigation measures against Website Defacement:=20
+=E2=80=A2 Properly configure and secure internet-facing network devices, di=
+sable unused or unnecessary network ports and protocols on VPN servers/ Ema=
+il servers and recommended to monitor any anomalous application behaviours =
+[new user creation] and unknown connections in the network traffic. Enforce=
+ MFA for all users and on all VPN connections and regularly review, validat=
+e, or remove privileged accounts.=20
+=E2=80=A2 Use the latest and updated versions of web server / applications =
+server applications, Apply appropriate updates/patches on the OS and Applic=
+ation software as and when available. Always apply the patch from the offic=
+ial channel.=20
+=E2=80=A2 Strict enforcement policies on popular Content Management systems=
+ (CMS) such as regular patching of CMS applications and its plug-ins such a=
+s file mangers, disabling of unused plugins, 2- Factor authentication, adeq=
+uate ACLs, File type & size Upload limit etc.=20
+=E2=80=A2 Periodically check the web server directories for any malicious/u=
+nknown web shell files, remove it as and when noticed. If found/ observed a=
+ny such malicious activity, report the incident to CERT-In Incident Respons=
+e Help Desk immediately. (Email: incident@cert-in.org.in)=20
+=E2=80=A2 Enforce strict control and monitoring of Windows Native applicati=
+ons such as command-line, PowerShell, WinRM, Windows Management Instrumenta=
+tion (WMI), and Distributed Component Object Model (DCOM).=20
+=E2=80=A2 Enable and maintain logs of different devices and servers [Webser=
+ver Access/Error logs, Application/DB/ Firewall/IDS/FTP logs] and maintain =
+the same for all the levels. Preserving of these logs help in analyzing the=
+ incidents and known the TTP of actors.=20
+=E2=80=A2 Use firewalls to create a buffer zone between the Internet (and o=
+ther un-trusted networks) and the networks used by the business. The firewa=
+ll rule set should deny traffic by default and a whitelist should be applie=
+d that only allows authorized protocols, ports and applications to exchange=
+ data across the boundary. This will reduce the exposure of systems to netw=
+ork based attacks. Employ effective processes for managing changes to avoid=
+ workarounds.=20
+=E2=80=A2 Check for unnecessary connectivity towards Content Delivery Netwo=
+rks, as malware are known to tunnel the connection towards these domains to=
+ hide their traffic and towards DDNS / free top level domains. Regular audi=
+ting of the failed connection attempts from DNS logs, proxy logs and to suc=
+cessful connection towards unknown domains. Some of the attacks use unconve=
+ntional usage of DNS queries to exfiltrate interact with the attackers [DNS=
+ TXT Records].=20
+=E2=80=A2 Conduct complete security audit of web application, web server, a=
+nd database server periodically and after every major configuration change =
+and plug vulnerabilities found. Services of CERT-In empanelled auditors may=
+ be availed. (Refer Cyber security Assurance section on website of CERT-In =
+https://www.cert-in.org.in/).=20
+
+Measures for prevention of Denial of Service (DoS/DDoS) attacks:=20
+1. Measures for detection of attacks=20
+=E2=80=A2 Understand your current environment, and have a baseline of the d=
+aily volume, type, and performance of network traffic.=20
+=E2=80=A2 Enable adequate logging mechanisms at perimeter level, server, an=
+d system level and review the logs at frequent intervals.=20
+=E2=80=A2 Continuously monitor the network activities & server logs to dete=
+ct and mitigate suspicious and malicious activities in your network. Review=
+ the traffic patterns and logs of perimeter devices to detect anomalies in =
+traffic, network level floods (TCP, UDP, SYN, etc.) and application floods =
+(HTTP GET) etc.=20
+=E2=80=A2 Preserve all logs indicating type of attack and attack sources.=
+=20
+
+2. Protection measures against Distributed Denial-of-Service (DDoS)=20
+=E2=80=A2 Thoroughly scan the network and online applications and plug any =
+existing vulnerability in the network devices, Operating Systems, Server so=
+ftware and application software and apply latest patches/updates as applica=
+ble.=20
+=E2=80=A2 Consider using a third-party DDoS protection service that can hel=
+p detect and mitigate attacks, often using a combination of automated and m=
+anual techniques=20
+=E2=80=A2 Employ defence-in-depth strategies: emphasize multiple, overlappi=
+ng and mutually supportive defensive systems to guard against single point =
+failures in any specific technology and protection method.=20
+=E2=80=A2 Deploy appropriate Intrusion/DDoS Prevention System capable of de=
+tecting and mitigating DDoS attacks. Ensure that Intrusion/DDoS Prevention =
+System contain signatures to detect the attacks launched from common attack=
+ tools.=20
+=E2=80=A2 Sudden surge in inbound traffic to any critical server or service=
+s, such as ICMP floods, UDP/TCP flood etc. could be due to Distributed Deni=
+al of Service (DDoS) attacks. If such attacks are observed, implement appro=
+priate response measures in coordination with Internet Service Provider (IS=
+P).=20
+=E2=80=A2 Identify the attack sources. Block the attack sources at Router/P=
+acket filtering device/DDoS prevention solutions. Disable non-essential por=
+ts/services.=20
+=E2=80=A2 To counter attacks on applications, check the integrity of critic=
+al application files periodically and in case of suspicion of attack restor=
+e applications and content from trusted backups.=20
+=E2=80=A2 Maintain list of contacts of ISPs, vendors of network and securit=
+y devices and contact them as appropriate.=20
+=E2=80=A2 In case your SLA with ISP includes DDoS mitigation services instr=
+uct your staff about the requirements to be sent to ISP.=20
+=E2=80=A2 Have a Business Continuity Plan and Disaster Recovery Plan ready =
+for activation in case of emergency.=20
+=E2=80=A2 =E2=80=A2Use CAPTCHA challenges to verify that traffic is coming =
+from real users rather than bots, preventing automated attacks=20
+
+
+3. Protection Mechanisms against Hack-and-Leak=20
+=E2=80=A2 Conduct regular vulnerability assessments to identify potential w=
+eaknesses in your systems and networks that could be exploited by hacktivis=
+ts.=20
+=E2=80=A2 Monitor social media channels for any threats or activity related=
+ to hacktivism.=20
+=E2=80=A2 Implement secure configuration settings on systems and applicatio=
+ns to make it more difficult for hacktivists to penetrate them.=20
+=E2=80=A2 Encrypt sensitive data both in transit and at rest to protect aga=
+inst data interception and theft.=20
+=E2=80=A2 Regularly backup important data to minimize the impact of a hack-=
+and-leak attack.=20
+=E2=80=A2 Limit the number of external-facing services to reduce the attack=
+ surface and make it more difficult for hacktivists to find vulnerabilities=
+.=20
+- ----------------------------------ALERTEND-------------------------------=
+--------------------------=20
+CERT-IN Threat Intel Team=20
+CERT-In=20
+-----BEGIN PGP SIGNATURE-----=20
+
+iQGzBAEBCAAdFiEE18QxKhH3psk73oSyMBJ44Xl9TXQFAmW3SnMACgkQMBJ44Xl9=20
+TXTOLAv+MgsdECJRK7o2FLEtzU6WcSKJnd98HFBZoPT57Biql35UesfqT+5zvfsq=20
++AuQBatYYldlRGN4fsEcHgE9uym91FSxl+KPIT5dHG1ip+/MpOZx9mnAfJzwRm2X=20
+4YFdRhsY8nTVvh12ZI93kphD1xwteSyh3nRK3UZ0YxqOuhJblNeIYli69vUCNnH+=20
+LWivOfEpRYP25k3Ishh4wf9K+m+x+IXm8S5tbKJgTlbAdPYRaTaeZsmLxb9SSd8P=20
+TxvvMocsOFXd8iWzzgKvbN5xqxkY1YCunpK5GNmxt/YTgel3V221GUpYL6Y52DDt=20
+RLDigyu6t8uxZtYltUgnKAtzQRpMSTvjUqbj3hsCnvM9lLiKM1XQ9vRQmNnCU4Yt=20
+gLWPu2yMq26vzk52NJ3NH0uDBkTDK43SoDXJ5cxltPDUpeuDIe5minIbV4fWBibU=20
+9iUNG319o+zqqZ/GGcghmCRZ0fbDIBeNlB47HLFIfRKQT6IZ6pNFbqdMZvmGr++R=20
+gJcXkRtz=20
+=3DRnek=20
+-----END PGP SIGNATURE-----=20
+
+
+=0A
+--=_6c03e5aa-68f5-4300-bc58-3d5565c99963
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><div style=3D"font-family: arial, helvetica, sans-serif; font-s=
+ize: style=3D" font-size:=3D"" 12pt;=3D"" color:=3D"" #000000"=3D""><div><d=
+iv>-----BEGIN PGP SIGNED MESSAGE-----</div><div>Hash: SHA256</div><div><br>=
+</div><div>[CMTX-P01203403] Hacktivist campaigns against Indian Cyber Space=
+, TLP: AMBER</div><div>META INFORMATION</div><div>Confidence- High</div><di=
+v>Risk- High</div><div>TLP- AMBER</div><div>- -----------------------------=
+-------------------------------------------</div><div>NOTE FOR ACTION REPOR=
+T:</div><div>=E2=80=A2 CERT-IN requires observation/incident reports, if an=
+y, pertaining to the shared alert i.e. SIEM alerts, specific positive hits,=
+ malware hashes, threat hunting results in sanitized form within 6 hours to=
+ cmtx.certin@meity.gov.in ONLY</div><div>=E2=80=A2 Compliance and after act=
+ion reports and comments on audit observations, timings and quality of the =
+alert contents, anomalies observed, false positives and any other comments =
+can be sent as a Monthly Cumulative Summary Report.</div><div>=E2=80=A2 CER=
+T-IN Threat Intelligence Platform recipients can share feedback anonymously=
+ in the form of IOCs/reports to the platform using TAXII INBOX functionalit=
+y.</div><div>- ------------------------------------------------------------=
+----------------------------</div><div>ALERT BRIEF:</div><div>As a part of =
+active tracking of hacktivist campaigns against Indian cyber space entities=
+, CERT-In has observed that different hacktivist group under #Opindia23 and=
+ #OPINDIA campaigns are active and launching DDoS and website defacement at=
+tacks against Indian websites and ICT infrastructure. In previous attacks, =
+hacktivist groups have gone further by distributing databases containing pe=
+rsonally identifiable information (PII), defacing websites, and asserting t=
+he compromise of user accounts.</div><div><br></div><div>It is also observe=
+d that attacker were using recently a DdosPanel, an open source tool for co=
+nducting DDoS attacks to perform the DDOS, Exfiltration, or defacement.</di=
+v><div>https://github.com/dandiers/DdosPanel</div><div><br></div><div>The h=
+acktivist group found active in recent campaigns are:</div><div><br></div><=
+div>=E2=80=A2<span style=3D"white-space:pre">=09</span>GARNESIA_TEAM</div><=
+div>=E2=80=A2<span style=3D"white-space:pre">=09</span>177 Members Communit=
+y</div><div>=E2=80=A2<span style=3D"white-space:pre">=09</span>SYLHET GANG-=
+SG&nbsp;</div><div>=E2=80=A2<span style=3D"white-space:pre">=09</span>Estee=
+m Restoration Eagle</div><div>=E2=80=A2<span style=3D"white-space:pre">=09<=
+/span>NIXON CYBER TEAM</div><div>=E2=80=A2<span style=3D"white-space:pre">=
+=09</span>TEAM R70</div><div>=E2=80=A2<span style=3D"white-space:pre">=09</=
+span>Team 1722</div><div>=E2=80=A2<span style=3D"white-space:pre">=09</span=
+>ANON BLACK FLAG</div><div>=E2=80=A2<span style=3D"white-space:pre">=09</sp=
+an>THE ANONYMOUS BD</div><div>=E2=80=A2<span style=3D"white-space:pre">=09<=
+/span>GARUDA FROM CYBER</div><div>=E2=80=A2<span style=3D"white-space:pre">=
+=09</span>Esteem Restoration Eagle</div><div>=E2=80=A2<span style=3D"white-=
+space:pre">=09</span>ETHERSEC TEAM CYBER</div><div>=E2=80=A2<span style=3D"=
+white-space:pre">=09</span>PADANG SYSTEM ERROR</div><div>=E2=80=A2<span sty=
+le=3D"white-space:pre">=09</span>TOXCAR CYBER TEAM</div><div>=E2=80=A2<span=
+ style=3D"white-space:pre">=09</span>SYLHET GANG-SG</div><div>=E2=80=A2<spa=
+n style=3D"white-space:pre">=09</span>ClaratZ</div><div>=E2=80=A2<span styl=
+e=3D"white-space:pre">=09</span>TEAM CYBER MAFIA</div><div>=E2=80=A2<span s=
+tyle=3D"white-space:pre">=09</span>Krypton</div><div><br></div><div>Mapping=
+ of TTPs used by these actors on MITRE ATT&amp;CK Matrix:-</div><div>T1491.=
+001 =E2=80=93 internal defacement</div><div>T1491.002 =E2=80=93 external de=
+facement</div><div>T1498.001 =E2=80=93 Direct Network Flood</div><div>T1498=
+.002=E2=80=93 Reflection Amplification</div><div>T1586-Compromsied Accounts=
+</div><div><br></div><div><br></div><div>Attack Vectors<span style=3D"white=
+-space:pre">=09</span></div><div>Website Defacement</div><div>DDoS</div><di=
+v>Compromised Credentials</div><div>Data Exfiltration</div><div><br></div><=
+div>Previous Hacktivist Alert References:-</div><div>[CMTX-P-102023633] [Ea=
+rly Warning] Probable hacktivist campaigns against Indian Cyber Space, TLP:=
+ AMBER October 27, 2023</div><div>[CMTX-P-102023524] [Early Warning] Probab=
+le hacktivist campaigns against Indian Cyber Space, TLP: AMBER October 20, =
+2023</div><div>[CMTX-P-102023523] [Early Warning] Probable hacktivist campa=
+igns against Indian Cyber Space, TLP: AMBER October 11, 2023</div><div>[CMT=
+X-P12202406] [Early Warning] Probable hacktivist campaigns against Indian C=
+yber Space, TLP: AMBER Dec 08, 2023</div><div><br></div><div>Best Practices=
+ and Recommendation for Mitigation against Website Defacement and DDOS atta=
+ck is provided below.</div><div><br></div><div>Mitigation measures against =
+Website Defacement:</div><div>=E2=80=A2<span style=3D"white-space:pre">=09<=
+/span>Properly configure and secure internet-facing network devices, disabl=
+e unused or unnecessary network ports and protocols on VPN servers/ Email s=
+ervers and recommended to monitor any anomalous application behaviours [new=
+ user creation] and unknown connections in the network traffic. Enforce MFA=
+ for all users and on all VPN connections and regularly review, validate, o=
+r remove privileged accounts.</div><div>=E2=80=A2<span style=3D"white-space=
+:pre">=09</span>Use the latest and updated versions of web server / applica=
+tions server applications, Apply appropriate updates/patches on the OS and =
+Application software as and when available. Always apply the patch from the=
+ official channel.</div><div>=E2=80=A2<span style=3D"white-space:pre">=09</=
+span>Strict enforcement policies on popular Content Management systems (CMS=
+) such as regular patching of CMS applications and its plug-ins such as fil=
+e mangers, disabling of unused plugins, 2- Factor authentication, adequate =
+ACLs, File type &amp; size Upload limit etc.</div><div>=E2=80=A2<span style=
+=3D"white-space:pre">=09</span>Periodically check the web server directorie=
+s for any malicious/unknown web shell files, remove it as and when noticed.=
+ If found/ observed any such malicious activity, report the incident to CER=
+T-In Incident Response Help Desk immediately. (Email: incident@cert-in.org.=
+in)</div><div>=E2=80=A2<span style=3D"white-space:pre">=09</span>Enforce st=
+rict control and monitoring of Windows Native applications such as command-=
+line, PowerShell, WinRM, Windows Management Instrumentation (WMI), and Dist=
+ributed Component Object Model (DCOM).</div><div>=E2=80=A2<span style=3D"wh=
+ite-space:pre">=09</span>Enable and maintain logs of different devices and =
+servers [Webserver Access/Error logs, Application/DB/ Firewall/IDS/FTP logs=
+] and maintain the same for all the levels. Preserving of these logs help i=
+n analyzing the incidents and known the TTP of actors.</div><div>=E2=80=A2<=
+span style=3D"white-space:pre">=09</span>Use firewalls to create a buffer z=
+one between the Internet (and other un-trusted networks) and the networks u=
+sed by the business. The firewall rule set should deny traffic by default a=
+nd a whitelist should be applied that only allows authorized protocols, por=
+ts and applications to exchange data across the boundary. This will reduce =
+the exposure of systems to network based attacks. Employ effective processe=
+s for managing changes to avoid workarounds.</div><div>=E2=80=A2<span style=
+=3D"white-space:pre">=09</span>Check for unnecessary connectivity towards C=
+ontent Delivery Networks, as malware are known to tunnel the connection tow=
+ards these domains to hide their traffic and towards DDNS / free top level =
+domains. Regular auditing of the failed connection attempts from DNS logs, =
+proxy logs and to successful connection towards unknown domains. Some of th=
+e attacks use unconventional usage of DNS queries to exfiltrate interact wi=
+th the attackers [DNS TXT Records].</div><div>=E2=80=A2<span style=3D"white=
+-space:pre">=09</span>Conduct complete security audit of web application, w=
+eb server, and database server periodically and after every major configura=
+tion change and plug vulnerabilities found. Services of CERT-In empanelled =
+auditors may be availed. (Refer Cyber security Assurance section on website=
+ of CERT-In https://www.cert-in.org.in/).</div><div><br></div><div>Measures=
+ for prevention of Denial of Service (DoS/DDoS) attacks:</div><div>1. Measu=
+res for detection of attacks</div><div>=E2=80=A2<span style=3D"white-space:=
+pre">=09</span>Understand your current environment, and have a baseline of =
+the daily volume, type, and performance of network traffic.</div><div>=E2=
+=80=A2<span style=3D"white-space:pre">=09</span>Enable adequate logging mec=
+hanisms at perimeter level, server, and system level and review the logs at=
+ frequent intervals.</div><div>=E2=80=A2<span style=3D"white-space:pre">=09=
+</span>Continuously monitor the network activities &amp; server logs to det=
+ect and mitigate suspicious and malicious activities in your network. Revie=
+w the traffic patterns and logs of perimeter devices to detect anomalies in=
+ traffic, network level floods (TCP, UDP, SYN, etc.) and application floods=
+ (HTTP GET) etc.</div><div>=E2=80=A2<span style=3D"white-space:pre">=09</sp=
+an>Preserve all logs indicating type of attack and attack sources.</div><di=
+v><br></div><div>2. Protection measures against Distributed Denial-of-Servi=
+ce (DDoS)</div><div>=E2=80=A2<span style=3D"white-space:pre">=09</span>Thor=
+oughly scan the network and online applications and plug any existing vulne=
+rability in the network devices, Operating Systems, Server software and app=
+lication software and apply latest patches/updates as applicable.</div><div=
+>=E2=80=A2<span style=3D"white-space:pre">=09</span>Consider using a third-=
+party DDoS protection service that can help detect and mitigate attacks, of=
+ten using a combination of automated and manual techniques</div><div>=E2=80=
+=A2<span style=3D"white-space:pre">=09</span>Employ defence-in-depth strate=
+gies: emphasize multiple, overlapping and mutually supportive defensive sys=
+tems to guard against single point failures in any specific technology and =
+protection method.</div><div>=E2=80=A2<span style=3D"white-space:pre">=09</=
+span>Deploy appropriate Intrusion/DDoS Prevention System capable of detecti=
+ng and mitigating DDoS attacks. Ensure that Intrusion/DDoS Prevention Syste=
+m contain signatures to detect the attacks launched from common attack tool=
+s.</div><div>=E2=80=A2<span style=3D"white-space:pre">=09</span>Sudden surg=
+e in inbound traffic to any critical server or services, such as ICMP flood=
+s, UDP/TCP flood etc. could be due to Distributed Denial of Service (DDoS) =
+attacks. If such attacks are observed, implement appropriate response measu=
+res in coordination with Internet Service Provider (ISP).</div><div>=E2=80=
+=A2<span style=3D"white-space:pre">=09</span>Identify the attack sources. B=
+lock the attack sources at Router/Packet filtering device/DDoS prevention s=
+olutions. Disable non-essential ports/services.</div><div>=E2=80=A2<span st=
+yle=3D"white-space:pre">=09</span>To counter attacks on applications, check=
+ the integrity of critical application files periodically and in case of su=
+spicion of attack restore applications and content from trusted backups.</d=
+iv><div>=E2=80=A2<span style=3D"white-space:pre">=09</span>Maintain list of=
+ contacts of ISPs, vendors of network and security devices and contact them=
+ as appropriate.</div><div>=E2=80=A2<span style=3D"white-space:pre">=09</sp=
+an>In case your SLA with ISP includes DDoS mitigation services instruct you=
+r staff about the requirements to be sent to ISP.</div><div>=E2=80=A2<span =
+style=3D"white-space:pre">=09</span>Have a Business Continuity Plan and Dis=
+aster Recovery Plan ready for activation in case of emergency.</div><div>=
+=E2=80=A2<span style=3D"white-space:pre">=09</span>=E2=80=A2Use CAPTCHA cha=
+llenges to verify that traffic is coming from real users rather than bots, =
+preventing automated attacks</div><div><br></div><div><br></div><div>3. Pro=
+tection Mechanisms against Hack-and-Leak</div><div>=E2=80=A2<span style=3D"=
+white-space:pre">=09</span>Conduct regular vulnerability assessments to ide=
+ntify potential weaknesses in your systems and networks that could be explo=
+ited by hacktivists.</div><div>=E2=80=A2<span style=3D"white-space:pre">=09=
+</span>Monitor social media channels for any threats or activity related to=
+ hacktivism.</div><div>=E2=80=A2<span style=3D"white-space:pre">=09</span>I=
+mplement secure configuration settings on systems and applications to make =
+it more difficult for hacktivists to penetrate them.</div><div>=E2=80=A2<sp=
+an style=3D"white-space:pre">=09</span>Encrypt sensitive data both in trans=
+it and at rest to protect against data interception and theft.</div><div>=
+=E2=80=A2<span style=3D"white-space:pre">=09</span>Regularly backup importa=
+nt data to minimize the impact of a hack-and-leak attack.</div><div>=E2=80=
+=A2<span style=3D"white-space:pre">=09</span>Limit the number of external-f=
+acing services to reduce the attack surface and make it more difficult for =
+hacktivists to find vulnerabilities.</div><div>- --------------------------=
+--------ALERTEND---------------------------------------------------------</=
+div><div>CERT-IN Threat Intel Team</div><div>CERT-In</div><div>-----BEGIN P=
+GP SIGNATURE-----</div><div><br></div><div>iQGzBAEBCAAdFiEE18QxKhH3psk73oSy=
+MBJ44Xl9TXQFAmW3SnMACgkQMBJ44Xl9</div><div>TXTOLAv+MgsdECJRK7o2FLEtzU6WcSKJ=
+nd98HFBZoPT57Biql35UesfqT+5zvfsq</div><div>+AuQBatYYldlRGN4fsEcHgE9uym91FSx=
+l+KPIT5dHG1ip+/MpOZx9mnAfJzwRm2X</div><div>4YFdRhsY8nTVvh12ZI93kphD1xwteSyh=
+3nRK3UZ0YxqOuhJblNeIYli69vUCNnH+</div><div>LWivOfEpRYP25k3Ishh4wf9K+m+x+IXm=
+8S5tbKJgTlbAdPYRaTaeZsmLxb9SSd8P</div><div>TxvvMocsOFXd8iWzzgKvbN5xqxkY1YCu=
+npK5GNmxt/YTgel3V221GUpYL6Y52DDt</div><div>RLDigyu6t8uxZtYltUgnKAtzQRpMSTvj=
+Uqbj3hsCnvM9lLiKM1XQ9vRQmNnCU4Yt</div><div>gLWPu2yMq26vzk52NJ3NH0uDBkTDK43S=
+oDXJ5cxltPDUpeuDIe5minIbV4fWBibU</div><div>9iUNG319o+zqqZ/GGcghmCRZ0fbDIBeN=
+lB47HLFIfRKQT6IZ6pNFbqdMZvmGr++R</div><div>gJcXkRtz</div><div>=3DRnek</div>=
+<div>-----END PGP SIGNATURE-----</div></div><div><br></div></div>
+<br>=
+<html><head></head><body> <p><a href=3D"https://amritmahotsav.nic.in/" target=3D"_blank"><img style=3D"width: 450px; height: 113px;" src=3D"https://email.gov.in/videos/images/75.jpg"/></a></p> </body></html>=0A
+<br>=
+</body></h=
+tml>
+--=_6c03e5aa-68f5-4300-bc58-3d5565c99963--
+
+--===============1558906033754317467==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+_______________________________________________
+Poc-cmtx-p mailing list
+
+--===============1558906033754317467==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+
+
+--===============1558906033754317467==--
+
+
+
+------=_20240129180153_14842
+Content-Type: message/rfc822; name="[Iiip-team] [cyber-security-alerts]
+ [Poc-cmtx-p] [CMTX-P012024295]	CVE-2024-23897: RCE Vulnerability Affecting
+ Jenkins software, TLP: CLEAR.msg"
+Content-Transfer-Encoding: 8bit
+Content-Disposition: attachment; filename="[Iiip-team]
+ [cyber-security-alerts] [Poc-cmtx-p] [CMTX-P012024295]	CVE-2024-23897: RCE
+ Vulnerability Affecting Jenkins software, TLP: CLEAR.msg"
+
+Return-Path: <iiip-team-bounces@ursc.gov.in>
+X-Original-To: tejas@prl.res.in
+Delivered-To: tejas@prl.res.in
+Received: from inbound.prl.res.in (mnmail.lan.prl.res.in [192.168.0.80])
+	by prlmail.lan.prl.res.in (Postfix) with ESMTPS id E3A2C154A98B;
+	Mon, 29 Jan 2024 17:00:08 +0530 (IST)
+Received: from localhost (localhost [127.0.0.1])
+	by inbound.prl.res.in (Postfix) with ESMTP id DC97B3A3AE7;
+	Mon, 29 Jan 2024 17:00:08 +0530 (IST)
+X-Virus-Scanned: amavisd-new at prl.res.in
+X-Spam-Flag: NO
+X-Spam-Score: -1.71
+X-Spam-Level:
+X-Spam-Status: No, score=-1.71 tagged_above=-999 required=7
+	tests=[BAYES_00=-1.9, DKIM_SIGNED=0.1, DKIM_VALID=-0.1,
+	DKIM_VALID_AU=-0.1, HTML_MESSAGE=0.001, MAILING_LIST_MULTI=-1,
+	MIME_HTML_MOSTLY=0.1, MIME_QP_LONG_LINE=0.001,
+	PDS_BAD_THREAD_QP_64=0.999, SPF_PASS=-0.001, SUBJECT_VERY_LONG=0.1,
+	TRACKER_ID=0.1, T_SCC_BODY_TEXT_LINE=-0.01] autolearn=no
+Authentication-Results: inbound.prl.res.in (amavisd-new);
+	dkim=pass (1024-bit key) header.d=ursc.gov.in header.b=PEtVfrLa;
+	dkim=fail (1024-bit key) reason="fail (message has been altered)"
+	header.d=meity.gov.in header.b=2bZmdhAa; dkim=fail (1024-bit key)
+	reason="fail (message has been altered)" header.d=meity.gov.in
+	header.b=1BDWxSwB
+Received: from inbound.prl.res.in ([127.0.0.1])
+	by localhost (inbound.prl.res.in [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id f55OLbXVLxYK; Mon, 29 Jan 2024 17:00:05 +0530 (IST)
+Received: from dns2.ursc.gov.in (dnsbsnl.ursc.gov.in [103.106.183.12])
+	by inbound.prl.res.in (Postfix) with ESMTP id 8509A3A3AEA;
+	Mon, 29 Jan 2024 17:00:04 +0530 (IST)
+DMARC-Filter: OpenDMARC Filter v1.3.1 inbound.prl.res.in 8509A3A3AEA
+Authentication-Results: OpenDMARCPRL; dmarc=pass header.from=ursc.gov.in
+Authentication-Results: OpenDMARCPRL; spf=pass smtp.mailfrom=iiip-team-bounces@ursc.gov.in
+Received: from localhost (localhost [127.0.0.1])
+	by services.ursc.dos.gov.in (Postfix) with ESMTP id 2C235929E2C;
+	Mon, 29 Jan 2024 17:00:04 +0530 (IST)
+DKIM-Filter: OpenDKIM Filter v2.11.0 dns2.ursc.gov.in 30C91C056630
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ursc.gov.in;
+	s=dnsbsnldkim; t=1706527804;
+	bh=q2g0za+nq32oGCe5SYnK5Ak2boxjvwt4TG0jCsRNsEo=;
+	h=Date:To:Subject:List-Id:List-Unsubscribe:List-Post:List-Help:
+	 List-Subscribe:From:Reply-To:From;
+	b=PEtVfrLaW5D6FNizgfmSt8/Ec5HNo0qxexiVG0ztPFwz872oaIvuP5Oj83nnPNQ+y
+	 Sa7uS8gCAfCj5y04bge91/JbHRRVLmOqKisYPuI+XSlYRWzxLMFvJV+LOQiEIDkTEw
+	 Rlhdnt1/udXyri8cNspsyJGm6WtTeXY6hmmNZA/E=
+X-Virus-Scanned: amavisd-new at ursc.gov.in
+Received: from services.ursc.dos.gov.in ([127.0.0.1])
+	by localhost (services.ursc.dos.gov.in [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id E0FR3c9inWon; Mon, 29 Jan 2024 17:00:03 +0530 (IST)
+Received: from services.ursc.dos.gov.in (localhost [127.0.0.1])
+	by services.ursc.dos.gov.in (Postfix) with ESMTP id 75428929DDE;
+	Mon, 29 Jan 2024 17:00:01 +0530 (IST)
+X-Original-To: iiip-team@ursc.gov.in
+Delivered-To: iiip-team@ursc.gov.in
+Received: from localhost (localhost [127.0.0.1])
+ by services.ursc.dos.gov.in (Postfix) with ESMTP id 3D5A092A902;
+ Mon, 29 Jan 2024 16:59:58 +0530 (IST)
+X-Virus-Scanned: amavisd-new at ursc.gov.in
+Received: from services.ursc.dos.gov.in ([127.0.0.1])
+ by localhost (services.ursc.dos.gov.in [127.0.0.1]) (amavisd-new, port 10024)
+ with LMTP id aw55Ih4Yyz4F; Mon, 29 Jan 2024 16:59:57 +0530 (IST)
+Received: from dns2.ursc.gov.in (dnserns.ursc.gov.in [172.20.2.58])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by services.ursc.dos.gov.in (Postfix) with ESMTPS id F1136929D9B;
+ Mon, 29 Jan 2024 16:59:53 +0530 (IST)
+Received-SPF: Pass (sender SPF authorized) identity=mailfrom;
+ client-ip=121.244.210.51; helo=mail.isro.gov.in;
+ envelope-from=cyber-security-alerts-bounces@isro.gov.in;
+ receiver=iiip-team@ursc.gov.in 
+DKIM-Filter: OpenDKIM Filter v2.11.0 dns2.ursc.gov.in 4TNmL916HzzMswm2
+Authentication-Results: dns2.ursc.gov.in;
+ dkim=fail reason="signature verification failed" (1024-bit key)
+ header.d=meity.gov.in header.i=@meity.gov.in header.b="2bZmdhAa"; 
+ dkim=fail reason="signature verification failed" (1024-bit key)
+ header.d=meity.gov.in header.i=@meity.gov.in header.b="1BDWxSwB"
+Received: from mail.isro.gov.in (mail.isro.gov.in [121.244.210.51])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by dns2.ursc.gov.in (Postfix) with ESMTPS id 4TNmL916HzzMswm2;
+ Mon, 29 Jan 2024 16:59:52 +0530 (IST)
+Received: from mail.isro.gov.in (localhost [127.0.0.1])
+ by mail.isro.gov.in (Postfix) with ESMTP id 2C3231B5CC9;
+ Mon, 29 Jan 2024 16:59:52 +0530 (IST)
+Received: from spacenet-internet-mail-relay.localdomain (unknown [172.16.0.4])
+ by mail.isro.gov.in (Postfix) with ESMTP id 16CF71AD3FB;
+ Mon, 29 Jan 2024 16:59:52 +0530 (IST)
+Received: from mail.isro.dos.gov.in (mail.isro.org [10.11.1.215])
+ by spacenet-internet-mail-relay.localdomain (Postfix) with ESMTP id 143DEC0219;
+ Mon, 29 Jan 2024 16:59:52 +0530 (IST)
+Received: from mail.isro.dos.gov.in (unknown [127.0.0.1])
+ by mail.isro.dos.gov.in (Postfix) with ESMTP id F33848018AAD6;
+ Mon, 29 Jan 2024 16:59:51 +0530 (IST)
+Received: from mailman.isro.gov.in (unknown [10.11.1.211])
+ by mail.isro.dos.gov.in (Postfix) with ESMTP id E09868018AAC8;
+ Mon, 29 Jan 2024 16:59:51 +0530 (IST)
+Received: from mailman.isro.gov.in (localhost [IPv6:::1])
+ by mailman.isro.gov.in (Postfix) with ESMTP id DE69E1357105;
+ Mon, 29 Jan 2024 16:59:51 +0530 (IST)
+X-Original-To: cyber-security-alerts@mailman.isro.gov.in
+Delivered-To: cyber-security-alerts@mailman.isro.gov.in
+Received: from mail.isro.dos.gov.in (mail.isro.org [10.11.1.215])
+ by mailman.isro.gov.in (Postfix) with ESMTP id 0E8351357105
+ for <cyber-security-alerts@mailman.isro.gov.in>;
+ Mon, 29 Jan 2024 16:59:50 +0530 (IST)
+Received: by mail.isro.dos.gov.in (Postfix)
+ id 09DA18018AAC8; Mon, 29 Jan 2024 16:59:50 +0530 (IST)
+Delivered-To: cyber-security-alerts@isro.gov.in
+Received: from mail.isro.dos.gov.in (unknown [127.0.0.1])
+ by mail.isro.dos.gov.in (Postfix) with ESMTP id E87D78018AAF8;
+ Mon, 29 Jan 2024 16:59:49 +0530 (IST)
+Received: from spacenet-internet-mail-relay.localdomain (unknown [10.11.2.215])
+ by mail.isro.dos.gov.in (Postfix) with ESMTP id CF37E8018AAC8;
+ Mon, 29 Jan 2024 16:59:49 +0530 (IST)
+Received: from mail.isro.gov.in (unknown [192.168.0.5])
+ by spacenet-internet-mail-relay.localdomain (Postfix) with ESMTP id CCFA1B40B7;
+ Mon, 29 Jan 2024 16:59:49 +0530 (IST)
+Received: from localhost (localhost [127.0.0.1])
+ by mail.isro.gov.in (Postfix) with ESMTP id CA5156E10E;
+ Mon, 29 Jan 2024 16:59:49 +0530 (IST)
+X-Virus-Scanned: amavisd-new at isro.gov.in
+Authentication-Results: mail-ingress.isro.gov.in (amavisd-new);
+ dkim=pass (1024-bit key) header.d=meity.gov.in header.b=2bZmdhAa;
+ dkim=pass (1024-bit key) header.d=meity.gov.in header.b=1BDWxSwB
+Received: from mail.isro.gov.in ([127.0.0.1])
+ by localhost (mail-ingress.isro.gov.in [127.0.0.1]) (amavisd-new, port 10024)
+ with ESMTP id XHgpRHpYNrqK; Mon, 29 Jan 2024 16:59:46 +0530 (IST)
+Received: from vastu212.nic.in (vastu212.nic.in [164.100.2.212])
+ by mail.isro.gov.in (Postfix) with ESMTPS id E35EF6E10D;
+ Mon, 29 Jan 2024 16:59:45 +0530 (IST)
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail.isro.gov.in E35EF6E10D
+Authentication-Results: mail.isro.gov.in;
+ dkim=pass (1024-bit key) header.d=meity.gov.in header.i=@meity.gov.in
+ header.b="2bZmdhAa"; 
+ dkim=pass (1024-bit key) header.d=meity.gov.in header.i=@meity.gov.in
+ header.b="1BDWxSwB"
+Received: from blist-relay3.nic.in (localhost.localdomain [127.0.0.1])
+ by blist-relay3.nic.in (Postfix) with ESMTP id EA0FB103E540B;
+ Mon, 29 Jan 2024 16:57:47 +0530 (IST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=meity.gov.in;
+ s=MEITY; t=1706527669;
+ bh=IG+I5scLjOMVWNNofO5OfaGJZzzgi1lYNGTIKwTL9aw=;
+ h=Date:From:To:Subject:List-Id:List-Help:List-Post:List-Subscribe:
+ List-Unsubscribe;
+ b=2bZmdhAazl4ELK0rWdJN7NX2FUR50FDlUV1pF3FRMQO0Rs+pBnAiQdPSQ/dQj3SXg
+ CIB9BcwaehQG5cKmftorbtjP4ar7ramEUC80rCPDs670H+LyXa3cakGi87MsWe08TP
+ Qes1cqAbHl3j9Yf9oOIqBHiF8GWYcQlYuBimLapM=
+Received: from lsmgr.email.gov.in (unknown [192.168.1.254])
+ by blist-relay3.nic.in (Postfix) with ESMTP id 650401050879;
+ Mon, 29 Jan 2024 16:57:46 +0530 (IST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=meity.gov.in;
+ s=MEITY; t=1706527667;
+ bh=IG+I5scLjOMVWNNofO5OfaGJZzzgi1lYNGTIKwTL9aw=;
+ h=Date:From:To:Subject:List-Id:List-Help:List-Post:List-Subscribe:
+ List-Unsubscribe;
+ b=1BDWxSwBNBf3TjejseaDionHLfWysTt1SZIPFfAhulFWDUZ3SwyMhWhB2qAQqV5m9
+ 4nFKTlsTVs2RXqHFGvfObNnioo6xFDm0gIp2NsItVl1anx6ZEgeZIMPt2UlBbIbrVe
+ RwIM9ASBsPLuy65NASP1mEM02+tZu7WughiPm2ks=
+Received: from localhost.localdomain (localhost.localdomain [127.0.0.1])
+ by lsmgr.email.gov.in (Postfix) with ESMTP id 8CC812268F24;
+ Mon, 29 Jan 2024 16:57:46 +0530 (IST)
+Received: from mailman2.nic.in (unknown [192.168.1.4])
+ by lsmgr.email.gov.in (Postfix) with ESMTP id 1A25D2265CF6
+ for <poc-cmtx-p@lsmgr.email.gov.in>; Mon, 29 Jan 2024 15:23:46 +0530 (IST)
+Received: from esadr06.nic.in ([100.81.27.12])
+ by mailman2.nic.in (8.14.7/8.14.4) with ESMTP id 40T9rji2024695
+ for <poc-cmtx-p@lsmgr.nic.in>; Mon, 29 Jan 2024 15:23:45 +0530
+IronPort-Data: A9a23:OmjFcK6/51zd/oVyOOPKnQxRtIfFchMFZxGqfqrLsTDasY5as4F+v
+ jQeXz+HOauPYWP1KowkYYix8BsC75LcyYRnHQE+/39hEysa+MHIO4+Ufxz6V8+wBpedFxo/t
+ 63ySTVhwOQcFCK0SsKFa+C5xZVa/f/WHuKU5MnsY3ghFVUMpB8J0E4lwahh6mJRqYDRKxuXv
+ t/vqNHoNlag2jplWkoZ8KvrRClH5ZwegxtG+ARlDRx3lAWGzSJMVcpEffjZw0bQGeG4IMbrH
+ o4v85nppgs1zz91Yvu5n7DydFE9Q7K6FWBiXVIPBsBOKjAbzsAD+v5T2Mg0MS+7uB3Q9zxF8
+ +ihgLTrIesf0gIgr8xGO/VQO3kW0aSrY9YrK1Dn2SCY5xWun3cBX5yCpaz5VGEV0r8fPI1Ay
+ RAXAAogUxW9l++N+eyydcVClPwyEPTEMapK7xmMzRmBZRonaZ/bRKrVvIQe2jY7wMFIdRrcT
+ 5NBMXw/NVKaPFsUUrsUIMtWcOOAjXzjY3tTpUiJpKwf5mXS0B0337/zdtvTEjCPbZ8Fxh/B9
+ z+uE2LRCSpCatjY8wq+wHenhOTvtD/YctgQG+jtnhJtqBjJroAJMzUOUlD+qvylmgumc9ZEL
+ kMOvCwvpu4z8iSWosLVBkXg5i7d+ERDHYE4//AG1TxhA5H8u26xblXohBYaADD6nKfanQAX6
+ 2I=
+IronPort-HdrOrdr: A9a23:RVGAfK/rMKbrk0i+kSduk+DsI+orL9Y04lQ7vn2ZKCYlFvBw+P
+ rBoB12737JYVUqKRQdcLK7Scq9qBrnnPYfi+V/AV7IZniFhILcFvAa0WKU+UyZJ8SRzI5g/J
+ YlW6x3F93rSXx9gMb04AW0euxM/DD+ytHPuQ6I9QYLcT1X
+X-Talos-CUID: =?us-ascii?q?9a23=3AAflnDmhbP7nUvdMZQaLgCqu/ezJuSFDgyUnALnS?=
+ =?us-ascii?q?BV29WZJOHcU6sxYxpup87?=
+X-Talos-MUID: 9a23:EUOADgsElTZxBJPc9s2njwo6asMv2ZSVOkUGk54mktWnH3ZyNGLI
+X-IronPort-AV: E=McAfee;i="6600,9927,10882"; a="2801195"
+X-IronPort-AV: E=Sophos;i="6.03,273,1694716200"; d="scan'208,217";a="2801195"
+X-Amp-Result: SKIPPED(no attachment in message)
+Received: from unknown (HELO gpogw13.nic.in) ([100.81.27.3])
+ by esadr06.nic.in with ESMTP; 29 Jan 2024 14:15:07 +0530
+Received: from gpogw13.nic.in (localhost [127.0.0.1])
+ by gpogw13.nic.in (Postfix) with ESMTPS id 4D62D431D5C7;
+ Mon, 29 Jan 2024 15:23:43 +0530 (IST)
+Received: from localhost (localhost [127.0.0.1])
+ by gpogw13.nic.in (Postfix) with ESMTP id 8327A431D5B5;
+ Mon, 29 Jan 2024 15:23:41 +0530 (IST)
+X-Amavis-Modified: Mail body modified (using disclaimer) - gpogw13.nic.in
+Received: from gpogw13.nic.in ([127.0.0.1])
+ by localhost (gpogw13.nic.in [127.0.0.1]) (amavisd-new, port 10026)
+ with ESMTP id mp0eDmygbLxK; Mon, 29 Jan 2024 15:23:40 +0530 (IST)
+Received: from gms045.nic.in (unknown [100.80.16.240])
+ by gpogw13.nic.in (Postfix) with ESMTP id E3683431D5D6;
+ Mon, 29 Jan 2024 15:23:38 +0530 (IST)
+Date: Mon, 29 Jan 2024 15:23:24 +0530 (IST)
+To: "alert reply" <alert_reply@cert-in.org.in>
+Message-ID: <1003486648.4411463.1706522004577@meity.gov.in>
+MIME-Version: 1.0
+X-Originating-IP: [223.31.174.169, 100.80.16.139]
+X-Mailer: Zimbra 8.8.15_GA_2148 (ZimbraWebClient - GC121 (Win)/8.8.15_GA_2148)
+Thread-Index: pfDHYSDs1Iu37wF0vJmMd4ROaSpfNQ==
+Thread-Topic: CVE-2024-23897: RCE Vulnerability Affecting Jenkins software,
+ TLP: CLEAR
+X-MailFrom: cmtx.certin@meity.gov.in
+X-Mailman-Rule-Hits: nonmember-moderation
+X-Mailman-Rule-Misses: dmarc-mitigation; no-senders; approved; emergency; loop;
+ banned-address; member-moderation
+Message-ID-Hash: XXT2AAD3FRYIT3WMOUKOZHF5JS36XKZX
+X-Message-ID-Hash: XXT2AAD3FRYIT3WMOUKOZHF5JS36XKZX
+X-Mailman-Approved-At: Mon, 29 Jan 2024 16:57:12 +0530
+X-Mailman-Version: 3.3.1
+Precedence: list
+Content-Type: multipart/mixed; boundary="===============5478805458491191673=="
+X-Virus-Scanned: ClamAV using ClamSMTP
+X-BeenThere: cyber-security-alerts@isro.gov.in
+X-Virus-Scanned: ClamAV using ClamSMTP
+X-Virus-Scanned: ClamAV using ClamSMTP
+Subject: [Iiip-team] [cyber-security-alerts] [Poc-cmtx-p]
+	[CMTX-P012024295]	CVE-2024-23897: RCE Vulnerability Affecting
+	Jenkins software, TLP: CLEAR
+X-BeenThere: iiip-team@ursc.gov.in
+List-Id: Iiip team  list <iiip-team.ursc.gov.in>
+List-Unsubscribe: <http://ursc.gov.in/mailman/options/iiip-team>,
+ <mailto:iiip-team-request@ursc.gov.in?subject=unsubscribe>
+List-Post: <mailto:iiip-team@ursc.gov.in>
+List-Help: <mailto:iiip-team-request@ursc.gov.in?subject=help>
+List-Subscribe: <http://ursc.gov.in/mailman/listinfo/iiip-team>,
+ <mailto:iiip-team-request@ursc.gov.in?subject=subscribe>
+From: CMTX-alerts-Cert-In via Iiip-team <iiip-team@ursc.gov.in>
+Reply-To: CMTX-alerts-Cert-In <cmtx.certin@meity.gov.in>
+Errors-To: iiip-team-bounces@ursc.gov.in
+Sender: "Iiip-team" <iiip-team-bounces@ursc.gov.in>
+
+--===============5478805458491191673==
+Content-Type: multipart/alternative;
+	boundary="=_5bef1fee-cf53-4aad-9896-fef8f6092b56"
+
+--=_5bef1fee-cf53-4aad-9896-fef8f6092b56
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+-----BEGIN PGP SIGNED MESSAGE-----=20
+Hash: SHA256=20
+
+[CMTX-P012024295] CVE-2024-23897: RCE Vulnerability Affecting Jenkins softw=
+are, TLP: CLEAR=20
+META INFORMATION=20
+Confidence- High=20
+Risk- High=20
+TLP- CLEAR=20
+- -------------------------------------------------------------------------=
+--------------------------------=20
+NOTE FOR ACTION REPORT:=20
+=E2=80=A2 CERT-IN requires observation/incident reports, if any, pertaining=
+ to the shared alert i.e. SIEM alerts, specific positive hits, malware hash=
+es, threat hunting results in sanitized form within 6 hours to cmtx.certin@=
+meity.gov.in ONLY=20
+=E2=80=A2 Compliance and after action reports and comments on audit observa=
+tions, timings and quality of the alert contents, anomalies observed, false=
+ positives and any other comments can be sent as a Monthly Cumulative Summa=
+ry Report.=20
+=E2=80=A2 CERT-IN Threat Intelligence Platform recipients can share feedbac=
+k anonymously in the form of IOCs/reports to the platform using TAXII INBOX=
+ functionality.=20
+- -------------------------------------------------------------------------=
+-------------------------=20
+ALERT BRIEF:=20
+CVE Number: CVE-2024-23897=20
+Targeted Product- Jenkins software=20
+
+Recently, it has been reported that a critical vulnerability (CVE-2024-2389=
+7) has been found affecting Jenkins software. The vulnerability is describe=
+d as an arbitrary file read vulnerability through the built-in command line=
+ interface (CLI) and uses args4j library to parse command arguments and it =
+results in remote code execution on its successful exploitation.=20
+Patched version:-=20
+Jenkins 2.442, LTS 2.426.3=20
+
+As Proof-of-concept (PoC) exploits for CVE-2024-23897 is publically availab=
+le so there are high chances of this vulnerability being actively exploited=
+.=20
+
+Recommendations:=20
+=E2=80=A2 Remove the CLI HTTP endpoint until the patch can be applied.=20
+=E2=80=A2 Ensure that the SSHD Port setting in the SSH Server section is se=
+t to Disable.=20
+
+For more detail about mitigation steps, please refer below link=20
+https://github.com/jenkinsci-cert/SECURITY-3314-3315/=20
+- ----------------------------------------ALERTEND-------------------------=
+-----------------------------=20
+CERT-IN Threat Intel Team=20
+CERT-In=20
+
+[PGP KEY ID 0x797D4D74]=20
+[Link:https://keyserver.pgp.com/vkd/SubmitSearch.event?SearchCriteria=3D0x7=
+97D4D74]=20
+-----BEGIN PGP SIGNATURE-----=20
+
+iQGzBAEBCAAdFiEE18QxKhH3psk73oSyMBJ44Xl9TXQFAmW3dPYACgkQMBJ44Xl9=20
+TXQi2Av/RQl4ts4lhK14PbrUIFJKI4QVfts6ZBVx5eygTxtAOBcuwHy04IJJt+D/=20
+aNHVxVP9oxOMYW7r535vcd84owXXnpAw3yBPZw9h5urxeWEtclDI4isnKka8bpXz=20
+fgM9WxsGnE1WcckeLTEdbij+SKwQeNXJzYcCFvWBAuNipnwBZS4gb8CWKM/eFJho=20
+6Ad71WjlGXLSLE4tCGIMRca4NoPQ+AtHKXs8ZbdR0nYkJ7HouTL28THpVAddGbzJ=20
+ZutEgmmF1aRUplfe3AaR8e44VA96Cxjq44mw0aierUg5Px5HGNOOxKgCjwlxlOf7=20
+ADL93yMywPrF7yPEP12ImJPyb5HMw0C4nKQuw4zOgwtfbyKbCb/9MnrjkDX2DzNc=20
+9exBqzo7VCU1hO7GRqPnRuyIdSPVGtSGI01lKdtQ0c4qX+ki7WU3zcFOHnKLmfrX=20
+IzIbk5pA0mNTGaoegHANDworMuPZkZj042DreAyLXsJu286Y6ShUPIEHJlEG73VB=20
+258JxI4b=20
+=3Dz034=20
+-----END PGP SIGNATURE-----=20
+
+
+=0A
+--=_5bef1fee-cf53-4aad-9896-fef8f6092b56
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><div style=3D"font-family: arial, helvetica, sans-serif; font-s=
+ize: style=3D" font-size:=3D"" 12pt;=3D"" color:=3D"" #000000"=3D""><div><d=
+iv>-----BEGIN PGP SIGNED MESSAGE-----</div><div>Hash: SHA256</div><div><br>=
+</div><div>[CMTX-P012024295] CVE-2024-23897: RCE Vulnerability Affecting Je=
+nkins software, TLP: CLEAR</div><div>META INFORMATION</div><div>Confidence-=
+ High</div><div>Risk- High</div><div>TLP- CLEAR&nbsp;</div><div>- ---------=
+---------------------------------------------------------------------------=
+---------------------</div><div>NOTE FOR ACTION REPORT:</div><div>=E2=80=A2=
+ CERT-IN requires observation/incident reports, if any, pertaining to the s=
+hared alert i.e.&nbsp; SIEM alerts, specific positive hits, malware hashes,=
+ threat hunting results in sanitized form within 6 hours to cmtx.certin@mei=
+ty.gov.in ONLY</div><div>=E2=80=A2 Compliance and after action reports and =
+comments on audit observations, timings and quality of the alert contents, =
+anomalies observed, false positives and any other comments can be sent as a=
+ Monthly Cumulative Summary Report.</div><div>=E2=80=A2 CERT-IN Threat Inte=
+lligence Platform recipients can share feedback anonymously in the form of =
+IOCs/reports to the platform using TAXII INBOX functionality.</div><div>- -=
+---------------------------------------------------------------------------=
+----------------------</div><div>ALERT BRIEF:</div><div>CVE Number: CVE-202=
+4-23897</div><div>Targeted Product- Jenkins software</div><div><br></div><d=
+iv>Recently, it has been reported that a critical vulnerability (CVE-2024-2=
+3897) has been found affecting Jenkins software. The vulnerability is descr=
+ibed as an arbitrary file read vulnerability through the built-in command l=
+ine interface (CLI) and uses args4j library to parse command arguments and =
+it results in remote code execution on its successful exploitation.</div><d=
+iv>Patched version:-</div><div>Jenkins 2.442, LTS 2.426.3</div><div><br></d=
+iv><div>As Proof-of-concept (PoC) exploits for CVE-2024-23897 is publically=
+ available so there are high chances of this vulnerability being actively e=
+xploited.</div><div><br></div><div>Recommendations:</div><div>=E2=80=A2<spa=
+n style=3D"white-space:pre">=09</span>Remove the CLI HTTP endpoint until th=
+e patch can be applied.</div><div>=E2=80=A2<span style=3D"white-space:pre">=
+=09</span>Ensure that the SSHD Port setting in the SSH Server section is se=
+t to Disable.</div><div><br></div><div>For more detail about mitigation ste=
+ps, please refer below link</div><div>https://github.com/jenkinsci-cert/SEC=
+URITY-3314-3315/</div><div>- ----------------------------------------ALERTE=
+ND------------------------------------------------------</div><div>CERT-IN =
+Threat Intel Team</div><div>CERT-In</div><div><br></div><div>[PGP KEY ID 0x=
+797D4D74]</div><div>[Link:https://keyserver.pgp.com/vkd/SubmitSearch.event?=
+SearchCriteria=3D0x797D4D74]</div><div>-----BEGIN PGP SIGNATURE-----</div><=
+div><br></div><div>iQGzBAEBCAAdFiEE18QxKhH3psk73oSyMBJ44Xl9TXQFAmW3dPYACgkQ=
+MBJ44Xl9</div><div>TXQi2Av/RQl4ts4lhK14PbrUIFJKI4QVfts6ZBVx5eygTxtAOBcuwHy0=
+4IJJt+D/</div><div>aNHVxVP9oxOMYW7r535vcd84owXXnpAw3yBPZw9h5urxeWEtclDI4isn=
+Kka8bpXz</div><div>fgM9WxsGnE1WcckeLTEdbij+SKwQeNXJzYcCFvWBAuNipnwBZS4gb8CW=
+KM/eFJho</div><div>6Ad71WjlGXLSLE4tCGIMRca4NoPQ+AtHKXs8ZbdR0nYkJ7HouTL28THp=
+VAddGbzJ</div><div>ZutEgmmF1aRUplfe3AaR8e44VA96Cxjq44mw0aierUg5Px5HGNOOxKgC=
+jwlxlOf7</div><div>ADL93yMywPrF7yPEP12ImJPyb5HMw0C4nKQuw4zOgwtfbyKbCb/9Mnrj=
+kDX2DzNc</div><div>9exBqzo7VCU1hO7GRqPnRuyIdSPVGtSGI01lKdtQ0c4qX+ki7WU3zcFO=
+HnKLmfrX</div><div>IzIbk5pA0mNTGaoegHANDworMuPZkZj042DreAyLXsJu286Y6ShUPIEH=
+JlEG73VB</div><div>258JxI4b</div><div>=3Dz034</div><div>-----END PGP SIGNAT=
+URE-----</div></div><div><br></div></div>
+<br>=
+<html><head></head><body> <p><a href=3D"https://amritmahotsav.nic.in/" target=3D"_blank"><img style=3D"width: 450px; height: 113px;" src=3D"https://email.gov.in/videos/images/75.jpg"/></a></p> </body></html>=0A
+<br>=
+</body></html>
+--=_5bef1fee-cf53-4aad-9896-fef8f6092b56--
+
+--===============5478805458491191673==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+_______________________________________________
+Poc-cmtx-p mailing list
+
+--===============5478805458491191673==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+
+
+--===============5478805458491191673==--
+
+
+
+------=_20240129180153_14842
+Content-Type: message/rfc822; name="[Iiip-team] [cyber-security-alerts] Cyber
+ Security Advisory: NCIIPC Advisory 29	Jan 2024 (TLP: AMBER).msg"
+Content-Transfer-Encoding: 8bit
+Content-Disposition: attachment; filename="[Iiip-team]
+ [cyber-security-alerts] Cyber Security Advisory: NCIIPC Advisory 29	Jan 2024
+ (TLP: AMBER).msg"
+
+Return-Path: <iiip-team-bounces@ursc.gov.in>
+X-Original-To: tejas@prl.res.in
+Delivered-To: tejas@prl.res.in
+Received: from inbound.prl.res.in (mnmail.lan.prl.res.in [192.168.0.80])
+	by prlmail.lan.prl.res.in (Postfix) with ESMTPS id 20454154A98B;
+	Mon, 29 Jan 2024 17:16:08 +0530 (IST)
+Received: from localhost (localhost [127.0.0.1])
+	by inbound.prl.res.in (Postfix) with ESMTP id 188263A3AEE;
+	Mon, 29 Jan 2024 17:16:08 +0530 (IST)
+X-Virus-Scanned: amavisd-new at prl.res.in
+X-Spam-Flag: NO
+X-Spam-Score: 3.11
+X-Spam-Level: ***
+X-Spam-Status: No, score=3.11 tagged_above=-999 required=7
+	tests=[BAYES_20=-0.001, DKIM_SIGNED=0.1, DKIM_VALID=-0.1,
+	DKIM_VALID_AU=-0.1, HTML_MESSAGE=0.001, MAILING_LIST_MULTI=-1,
+	MIME_HTML_MOSTLY=0.1, MISSING_HEADERS=1.021,
+	PDS_BAD_THREAD_QP_64=0.999, REPLYTO_WITHOUT_TO_CC=2, SPF_PASS=-0.001,
+	SUBJECT_VERY_LONG=0.1, T_SCC_BODY_TEXT_LINE=-0.01,
+	URI_TRUNCATED=0.001] autolearn=no
+Authentication-Results: inbound.prl.res.in (amavisd-new);
+	dkim=pass (1024-bit key) header.d=ursc.gov.in header.b=GqEM88ZF;
+	dkim=fail (1024-bit key) reason="fail (message has been altered)"
+	header.d=nciipc.gov.in header.b=R0c7GVH6
+Received: from inbound.prl.res.in ([127.0.0.1])
+	by localhost (inbound.prl.res.in [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id QbyctTx_7VTh; Mon, 29 Jan 2024 17:16:03 +0530 (IST)
+Received: from dns2.ursc.gov.in (dns2.ursc.gov.in [103.106.183.12])
+	by inbound.prl.res.in (Postfix) with ESMTP id D7E913A3AEA;
+	Mon, 29 Jan 2024 17:16:02 +0530 (IST)
+DMARC-Filter: OpenDMARC Filter v1.3.1 inbound.prl.res.in D7E913A3AEA
+Authentication-Results: OpenDMARCPRL; dmarc=pass header.from=ursc.gov.in
+Authentication-Results: OpenDMARCPRL; spf=pass smtp.mailfrom=iiip-team-bounces@ursc.gov.in
+Received: from localhost (localhost [127.0.0.1])
+	by services.ursc.dos.gov.in (Postfix) with ESMTP id 306FD929D89;
+	Mon, 29 Jan 2024 17:16:02 +0530 (IST)
+DKIM-Filter: OpenDKIM Filter v2.11.0 dns2.ursc.gov.in 51F62C0565FA
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ursc.gov.in;
+	s=dnsbsnldkim; t=1706528762;
+	bh=ClekMIlPY7V2zs7WwtMJ3B4wz7BCW71h84EhaACxyT0=;
+	h=Date:In-Reply-To:References:Subject:List-Id:List-Unsubscribe:
+	 List-Post:List-Help:List-Subscribe:From:Reply-To:From;
+	b=GqEM88ZF1VoBenLK1adxtLPsFWkGfBPbR4NA9+u9DIPrSGElNwmdtOr84iC7Iqiig
+	 Ll7a+GSHkeqR21qXA51lUJGmbRhkRqRhOqLGuOZtNrAo3UTNd/By9wq5dnlGjYBFWJ
+	 vA8Ivl1WkLMNDPW7U0D1blOESLhFhd16xij+Xzto=
+X-Virus-Scanned: amavisd-new at ursc.gov.in
+Received: from services.ursc.dos.gov.in ([127.0.0.1])
+	by localhost (services.ursc.dos.gov.in [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id jQcStEEjdp75; Mon, 29 Jan 2024 17:16:01 +0530 (IST)
+Received: from services.ursc.dos.gov.in (localhost [127.0.0.1])
+	by services.ursc.dos.gov.in (Postfix) with ESMTP id 62B85929E2C;
+	Mon, 29 Jan 2024 17:16:00 +0530 (IST)
+X-Original-To: iiip-team@ursc.gov.in
+Delivered-To: iiip-team@ursc.gov.in
+Received: from localhost (localhost [127.0.0.1])
+ by services.ursc.dos.gov.in (Postfix) with ESMTP id 6EDD4929C8C;
+ Mon, 29 Jan 2024 17:15:58 +0530 (IST)
+X-Virus-Scanned: amavisd-new at ursc.gov.in
+Received: from services.ursc.dos.gov.in ([127.0.0.1])
+ by localhost (services.ursc.dos.gov.in [127.0.0.1]) (amavisd-new, port 10024)
+ with LMTP id m_5MhbjxKDbm; Mon, 29 Jan 2024 17:15:57 +0530 (IST)
+Received: from dns2.ursc.gov.in (dnserns.ursc.gov.in [172.20.2.58])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by services.ursc.dos.gov.in (Postfix) with ESMTPS id B2AA6929E2C;
+ Mon, 29 Jan 2024 17:15:57 +0530 (IST)
+Received-SPF: Pass (sender SPF authorized) identity=mailfrom;
+ client-ip=121.244.210.51; helo=mail.isro.gov.in;
+ envelope-from=cyber-security-alerts-bounces@isro.gov.in;
+ receiver=iiip-team@ursc.gov.in 
+DKIM-Filter: OpenDKIM Filter v2.11.0 dns2.ursc.gov.in 4TNmhh6pckzMswm3
+Authentication-Results: dns2.ursc.gov.in;
+ dkim=fail reason="signature verification failed" (1024-bit key)
+ header.d=nciipc.gov.in header.i=@nciipc.gov.in header.b="R0c7GVH6"
+Received: from mail.isro.gov.in (mail.isro.gov.in [121.244.210.51])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by dns2.ursc.gov.in (Postfix) with ESMTPS id 4TNmhh6pckzMswm3;
+ Mon, 29 Jan 2024 17:15:54 +0530 (IST)
+Received: from mail.isro.gov.in (localhost [127.0.0.1])
+ by mail.isro.gov.in (Postfix) with ESMTP id 7324A1B5CD7;
+ Mon, 29 Jan 2024 17:15:54 +0530 (IST)
+Received: from spacenet-internet-mail-relay.localdomain (unknown [172.16.0.4])
+ by mail.isro.gov.in (Postfix) with ESMTP id 5E0751B5CC9;
+ Mon, 29 Jan 2024 17:15:54 +0530 (IST)
+Received: from mail.isro.dos.gov.in (mail.isro.org [10.11.1.215])
+ by spacenet-internet-mail-relay.localdomain (Postfix) with ESMTP id 5B564C0219;
+ Mon, 29 Jan 2024 17:15:54 +0530 (IST)
+Received: from mail.isro.dos.gov.in (unknown [127.0.0.1])
+ by mail.isro.dos.gov.in (Postfix) with ESMTP id 36A158018AAD5;
+ Mon, 29 Jan 2024 17:15:54 +0530 (IST)
+Received: from mailman.isro.gov.in (unknown [10.11.1.211])
+ by mail.isro.dos.gov.in (Postfix) with ESMTP id 2402C8018AAC8;
+ Mon, 29 Jan 2024 17:15:54 +0530 (IST)
+Received: from mailman.isro.gov.in (localhost [IPv6:::1])
+ by mailman.isro.gov.in (Postfix) with ESMTP id 13E2D1357105;
+ Mon, 29 Jan 2024 17:15:54 +0530 (IST)
+X-Original-To: cyber-security-alerts@mailman.isro.gov.in
+Delivered-To: cyber-security-alerts@mailman.isro.gov.in
+Received: from mail.isro.dos.gov.in (mail.isro.org [10.11.1.215])
+ by mailman.isro.gov.in (Postfix) with ESMTP id ED1CB1357105
+ for <cyber-security-alerts@mailman.isro.gov.in>;
+ Mon, 29 Jan 2024 17:15:52 +0530 (IST)
+Received: by mail.isro.dos.gov.in (Postfix)
+ id DF4258018AAC8; Mon, 29 Jan 2024 17:15:52 +0530 (IST)
+Delivered-To: cyber-security-alerts@isro.gov.in
+Received: from mail.isro.dos.gov.in (unknown [127.0.0.1])
+ by mail.isro.dos.gov.in (Postfix) with ESMTP id 983998018AAF6;
+ Mon, 29 Jan 2024 17:15:52 +0530 (IST)
+Received: from spacenet-internet-mail-relay.localdomain (unknown [10.11.2.215])
+ by mail.isro.dos.gov.in (Postfix) with ESMTP id 7036C8018AAD5;
+ Mon, 29 Jan 2024 17:15:52 +0530 (IST)
+Received: from mail.isro.gov.in (unknown [192.168.0.5])
+ by spacenet-internet-mail-relay.localdomain (Postfix) with ESMTP id 6D916B40B7;
+ Mon, 29 Jan 2024 17:15:52 +0530 (IST)
+Received: from localhost (localhost [127.0.0.1])
+ by mail.isro.gov.in (Postfix) with ESMTP id 5F547C45B6;
+ Mon, 29 Jan 2024 17:15:52 +0530 (IST)
+X-Virus-Scanned: amavisd-new at isro.gov.in
+Authentication-Results: mail-ingress.isro.gov.in (amavisd-new);
+ dkim=pass (1024-bit key) header.d=nciipc.gov.in
+Received: from mail.isro.gov.in ([127.0.0.1])
+ by localhost (mail-ingress.isro.gov.in [127.0.0.1]) (amavisd-new, port 10024)
+ with ESMTP id 3B4AmHkRV2qU; Mon, 29 Jan 2024 17:15:48 +0530 (IST)
+Received: from vastu159.nic.in (esahydvagw04.nic.in [164.100.2.159])
+ by mail.isro.gov.in (Postfix) with ESMTPS id AB636C45AD;
+ Mon, 29 Jan 2024 17:15:47 +0530 (IST)
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail.isro.gov.in AB636C45AD
+Authentication-Results: mail.isro.gov.in;
+ dkim=pass (1024-bit key) header.d=nciipc.gov.in header.i=@nciipc.gov.in
+ header.b="R0c7GVH6"
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+ d=nciipc.gov.in; i=@nciipc.gov.in; q=dns/txt; s=NCIIPC;
+ t=1706528748; x=1738064748;
+ h=date:from:message-id:in-reply-to:references:subject:
+ mime-version; bh=kQRY/Tx/GqASpPnN1M4Cw5hB0EKfpOr6DdeUPpGpwoI=;
+ b=R0c7GVH6KF2YafFWkiX8yjIKuOSPppN24ArJ1ItUJWWJxdNJrqeGf41j
+ ZNJQVvvv/1TRnpgKpmprb+eYtJ2ifRxVyX8PiDFtxwxjAH51xyen5IaQD
+ D8juktoYTcPfSmPCz1Ty/hY9VIOIbbTzulH4uCqYIQTZJ0In/1oTKI+AV k=;
+X-fn: 1.png, IOC_Adv2024Jan072.txt
+X-fs: 25869, 2820
+X-ft: image/png, text/plain
+IronPort-Data: A9a23:BplKlKMhJCqvbOTvrR0yl8FynXyQoLVcMsEvi/8bNLSAYAhS1itHk
+ DUv7Vr2OfnbNGX9fY9/atuw/EIA7MSDnYUwHQs5rCwyFSgQ9prMCYvHcxyoZy3JcsbPRRI5s
+ slHZITLIZ0+HyGE/Eb8P9ANwZUdOYSgHtIQX8aeZ3AvFGeIMRsctC6P8gJBbuRAoP+SNCqBp
+ 4mq+ZH9MVn9hGQyLnIIg07ogEJj5qujs2tDtFBhO6ASslSHzSZNVptPK/m4cSekS9cJEOfmS
+ eyck73poT6E8kojVYr+zb/3KkMBSOPbbFnQhyo+t8RO+vRnjnRaPvETbqpGMS+78gm0ou2d6
+ OmhlLThQl0iNKORybxCA0YHSHsmZ/Uf9rHJKCHk7MGdkh2Zfie1k6RlAX9tMNxD8I6bI43uG
+ d/0idwpRkre7w5j6OvjEoGAvux6cI+xetp3VkhIlVnxFewhTY3IX5LE7NpZ2CZYrs1VFJ4yX
+ eJBAdZSRE+ojyNnaw9/5K0Wwb/AaknXK1VwtF+TrKwr1GnfpCQZPG/FaYe9lnSiHK25r27Az
+ o701zyR7iIybbRz/QG4HkeE3Ycjq89UtLU6T9VU/tYy6LGaK/d65Bc+DTNXqtHh4qKytk42x
+ 0E8okITQaYOGEODCdbkfAaEhGW97iUYB8dWLvcA7ju94/+Bi+qZLjBsoj9pZ8Qhu9BvH3os1
+ 1TPntWB6T5H6eXNDyLFsO7N62/sUcQWBTZqiSssRAcb4sLkupAbiBnOT85oVqGykJv0H1kcx
+ hjX8nRh3+tL3Kbn0Y270mGbrR2TnaPZcSAQuAXUR2SnyUBmMdvNi4uArAKzAex7BJiQVESH+
+ mMFncea5cgHDIuRmSjLS+IIdJmi5u2CGDfRhRhkGN8g8VyF8nyqbMZa6T53OEZBOMYJfXnoZ
+ if7sBlP5ZlfP2GlcLdraqq7C8kui6nmffzuSOr8ZNpDZt5wcmev5CFpYkq402ng1kcrj+c+P
+ /+zetemAGxfEqls0SC3W/ZY2Lsm3Dwl7WLIX5e9wBO5l7uYDFaPQLUELnOPdfo+qqyDvkPU9
+ b53MsKKxhNTSuS4eSjR/o47KFkQMGQ6Q5vx7c1RHsaDIBJOAmggD+PcxbInd41s2a9Sk4/g9
+ Gu8WEJDyBzzjGHbIC2Qa3QlY7TqNb5hrHAyLCUvIFOhwT4gZK6z5bsWfJwyeKQh9edq0f9zS
+ eJDcMKFatxKQyjH8jJbbpDmrYhjchuigCqQOCasbj85cp9sSgWP8djhFjYD7wFXVnLx5ZN4+
+ uTmil2zrYc/ejmOxf3+MJqHp25dd1BHxLMas5fgSjWLRHjRzQ==
+IronPort-HdrOrdr: A9a23:esdouqEDSoSc6NUxpLqE0MeALOsnbusQ8zAXPiFKOHlom6Oj+/
+ xHApwgpHvJYVoqN03I3OrgBEDiewK/yXcW2+cs1N6ZNWGM0gaVxcNZjbcKqAeQeBEWg9QtrZ
+ uIBJIOceEYdWIK6/oStzPIdOod/A==
+X-Talos-CUID: 9a23:RZBeJ2PxJU0Iau5DHyZ+11UoPtscIkbZkGrWHlWCD1xZYejA
+X-Talos-MUID: =?us-ascii?q?9a23=3AeqwO/g9Xcp6vZuuWH2VgX7yQf8dH0viAJ382qoU?=
+ =?us-ascii?q?5lezaNS9pPTW6zyviFw=3D=3D?=
+Date: Mon, 29 Jan 2024 16:57:10 +0530 (IST)
+Message-ID: <1784939118.14895817.1706527630461@nciipc.gov.in>
+In-Reply-To: <1826423622.14894788.1706527575707@nciipc.gov.in>
+References: <573165510.6279477.1700048462868@nciipc.gov.in>
+ <289227495.14890393.1706527361077@nciipc.gov.in>
+ <52198163.14891557.1706527402118@nciipc.gov.in>
+ <1888225720.14892447.1706527441731@nciipc.gov.in>
+ <621529716.14892968.1706527473502@nciipc.gov.in>
+ <320951033.14893601.1706527506324@nciipc.gov.in>
+ <1909456017.14894382.1706527545813@nciipc.gov.in>
+ <1826423622.14894788.1706527575707@nciipc.gov.in>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+ boundary="----=_Part_14895808_305237154.1706527630451"
+Thread-Topic: Cyber Security Advisory: NCIIPC Advisory 29 Jan 2024 (TLP: AMBER)
+Thread-Index: 0q22W0K32MQ20jfOUG8VbvktWYBq3ue2XnqpsBXMUbGE07i1Rk7btlRI2DBsusQ+oqe0JbwAffaoopEAVbDXL+muKMZVcyXcl6oV/5/nH73JZe8k0yKJGPo2j5Vv1ZofFiXG9ECBHIiqMpB9xwOrTly7Z4fpLmK+XmyOACWhAWGrjkgVt4adJFGz2FrlM3kN/R8b/NT8rf/byybRsTP8qGrAY2XFzm5v7GGv5zH4qYPM
+X-Virus-Scanned: ClamAV using ClamSMTP
+X-BeenThere: cyber-security-alerts@isro.gov.in
+X-Mailman-Version: 2.1.15
+Precedence: list
+X-Virus-Scanned: ClamAV using ClamSMTP
+X-Virus-Scanned: ClamAV using ClamSMTP
+Subject: [Iiip-team] [cyber-security-alerts] Cyber Security Advisory: NCIIPC
+	Advisory 29	Jan 2024 (TLP: AMBER)
+X-BeenThere: iiip-team@ursc.gov.in
+List-Id: Iiip team  list <iiip-team.ursc.gov.in>
+List-Unsubscribe: <http://ursc.gov.in/mailman/options/iiip-team>,
+ <mailto:iiip-team-request@ursc.gov.in?subject=unsubscribe>
+List-Post: <mailto:iiip-team@ursc.gov.in>
+List-Help: <mailto:iiip-team-request@ursc.gov.in?subject=help>
+List-Subscribe: <http://ursc.gov.in/mailman/listinfo/iiip-team>,
+ <mailto:iiip-team-request@ursc.gov.in?subject=subscribe>
+From: Advisory NCIIPC via Iiip-team <iiip-team@ursc.gov.in>
+Reply-To: Advisory NCIIPC <advisory@nciipc.gov.in>
+Errors-To: iiip-team-bounces@ursc.gov.in
+Sender: "Iiip-team" <iiip-team-bounces@ursc.gov.in>
+
+------=_Part_14895808_305237154.1706527630451
+Content-Type: multipart/alternative; 
+	boundary="=_74590296-b088-4c7a-bd4e-393f4dec7f1f"
+
+--=_74590296-b088-4c7a-bd4e-393f4dec7f1f
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+
+	
+
+Government of India 
+
+
+
+
+National Critical Information Infrastructure Protection Centre 
+
+
+
+
+(A Unit of NTRO) 	
+
+
+		
+
+Date: 29 Jan 2024 
+
+
+Advisory No: Adv/2024/Jan/072 
+Cyber Security Advisory: Malicious IPs 
+This data is to be considered as TLP: AMBER 
+It has been reported that attached IOCs are active in Indian CyberSpace. 
+
+IOCs: IOC_Adv2024Jan072.txt attached 
+
+Recommendation: 
+
+
+    * It is recommended that organisations should apply the attached IoCs on their security systems to identify attacks. Occurrence of any communication traces pertaining to these IoCs may be reported to NCIIPC. 
+
+This document is distributed as TLP: AMBER. Limited disclosure, recipients can only spread this on a need-to-know basis within their organization and its clients. Sources may use TLP: AMBER when information requires support to be effectively acted upon, yet carries risk to privacy, reputation, or operations if shared outside of the organizations involved. Recipients may share TLP: AMBER information with members of their own organization and its clients, but only on a need-to-know basis to protect their organization and its clients and prevent further harm. 
+
+
+Disclaimer: 
+
+The information provided by NCIIPC above is on "as is" basis only. System owners are advised to independently evaluate the contents for its applicability in their specific environment, and take appropriate action as per their own assessment of the implications of the alert/ advisory on their systems. NCIIPC will not be liable for any issues or problems that may arise from application or non-application of the alert/ advisory. System owners are wholly responsible for cyber security updates to their information technology systems. 
+
+With Best Regards, 
+Knowledge Management System 
+National Critical Information Infrastructure Protection Centre 
+Block-III, Old JNU Campus, New Delhi - 110067 
+Website: [ http://www.nciipc.gov.in/ | www.nciipc.gov.in ] 
+Toll Free: 1800-11-4430 
+
+
+
+
+
+
+
+
+--=_74590296-b088-4c7a-bd4e-393f4dec7f1f
+Content-Type: multipart/related; 
+	boundary="=_769fab57-a35b-4e31-995b-c3d1e28d0b1f"
+
+--=_769fab57-a35b-4e31-995b-c3d1e28d0b1f
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><div style=3D"font-family: arial, helvetica, sans-serif; font-s=
+ize: style=3D" font-size:=3D"" 12pt;=3D"" color:=3D"" #000000"=3D""><div><s=
+tyle>/*<![CDATA[*/p {
+=09margin-bottom: 0.25cm;
+=09direction: ltr;
+=09line-height: 115.0%;
+=09text-align: left;
+=09orphans: 2;
+=09widows: 2;
+=09background: transparent;
+}
+a:link {
+=09color: rgb(0,0,128);
+=09text-decoration: underline;
+}
+strong {
+=09font-weight: bold;
+}
+/*]]>*/</style><style>/*<![CDATA[*/p {
+=09margin-bottom: 0.25cm;
+=09direction: ltr;
+=09line-height: 115.0%;
+=09text-align: left;
+=09orphans: 2;
+=09widows: 2;
+=09background: transparent;
+}
+a:link {
+=09color: rgb(0,0,128);
+=09text-decoration: underline;
+}
+strong {
+=09font-weight: bold;
+}
+/*]]>*/</style></div><div><br></div><div data-marker=3D"__QUOTED_TEXT__"><d=
+iv style=3D"font-family:'arial' , 'helvetica' , sans-serif"><div><div style=
+=3D"font-family:'arial' , 'helvetica' , sans-serif"><div><div style=3D"font=
+-family:'arial' , 'helvetica' , sans-serif"><div><div style=3D"font-family:=
+'arial' , 'helvetica' , sans-serif"><div><div style=3D"font-family:'arial' =
+, 'helvetica' , sans-serif"><div><div style=3D"font-family:'arial' , 'helve=
+tica' , sans-serif"><div><div style=3D"font-family:'arial' , 'helvetica' , =
+sans-serif"><div><div style=3D"font-family:'arial' , 'helvetica' , sans-ser=
+if"><div><div style=3D"font-family:'arial' , 'helvetica' , sans-serif"><div=
+><div style=3D"font-family:'arial' , 'helvetica' , sans-serif"><div><div st=
+yle=3D"font-family:'arial' , 'helvetica' , sans-serif"><div><div style=3D"f=
+ont-family:'arial' , 'helvetica' , sans-serif"><div><div style=3D"font-fami=
+ly:'arial' , 'helvetica' , sans-serif"><div style=3D"font-family:'arial' , =
+'helvetica' , sans-serif"><div style=3D"font-family:'arial' , 'helvetica' ,=
+ sans-serif"><div style=3D"font-family:'arial' , 'helvetica' , sans-serif">=
+<div style=3D"font-family:'arial' , 'helvetica' , sans-serif"><div style=3D=
+"font-family:'arial' , 'helvetica' , sans-serif"><div style=3D"font-family:=
+'arial' , 'helvetica' , sans-serif"><div style=3D"font-family:'arial' , 'he=
+lvetica' , sans-serif"><div style=3D"font-family:'arial' , 'helvetica' , sa=
+ns-serif"><div style=3D"font-family:'arial' , 'helvetica' , sans-serif"><di=
+v style=3D"font-family:'arial' , 'helvetica' , sans-serif"><div style=3D"fo=
+nt-family:'arial' , 'helvetica' , sans-serif"><div style=3D"font-family:'ar=
+ial' , 'helvetica' , sans-serif"><div style=3D"font-family:'arial' , 'helve=
+tica' , sans-serif"><div style=3D"font-family:'arial' , 'helvetica' , sans-=
+serif"><div style=3D"font-family:'arial' , 'helvetica' , sans-serif"><div s=
+tyle=3D"font-family:'arial' , 'helvetica' , sans-serif"><div style=3D"font-=
+family:'arial' , 'helvetica' , sans-serif"><div style=3D"font-family:'arial=
+' , 'helvetica' , sans-serif"><div style=3D"font-family:'arial' , 'helvetic=
+a' , sans-serif"><div style=3D"font-family:'arial' , 'helvetica' , sans-ser=
+if"><div style=3D"font-family:'arial' , 'helvetica' , sans-serif"><div styl=
+e=3D"font-family:'arial' , 'helvetica' , sans-serif"><div style=3D"font-fam=
+ily:'arial' , 'helvetica' , sans-serif"><div style=3D"font-family:'arial' ,=
+ 'helvetica' , sans-serif"><div style=3D"font-family:'arial' , 'helvetica' =
+, sans-serif"><div style=3D"font-family:'arial' , 'helvetica' , sans-serif"=
+><div style=3D"font-family:'arial' , 'helvetica' , sans-serif"><div style=
+=3D"font-family:'arial' , 'helvetica' , sans-serif"><div style=3D"font-fami=
+ly:'arial' , 'helvetica' , sans-serif"><div style=3D"font-family:'arial' , =
+'helvetica' , sans-serif"><table class=3D"MsoNormalTable" width=3D"880" cel=
+lspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left" style=3D"heigh=
+t:54px;font-family:'arial' , 'helvetica' , sans-serif;letter-spacing:normal=
+;text-transform:none;word-spacing:0px;font-size:x-small;background-color:#f=
+fffff;width:880px;border-collapse:collapse;margin-left:6.75pt;margin-right:=
+6.75pt"><tbody style=3D"font-family:'liberation sans';font-size:x-small"><t=
+r style=3D"font-family:'liberation sans';font-size:x-small;height:10px"><td=
+ valign=3D"top" style=3D"font-family:'liberation sans';font-size:x-small;wi=
+dth:122px;padding:0in 5.4pt;height:10px"><img src=3D"data:image/png;base64,=
+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
+UJWSyTLUGtu6erNy+WRK6sq1n1pvdNjZs7+5o2vJ8jV/fv5liaIkmyuSKEtqm7eryyqefeGVt+Y=
+vUunKd+09WKyvoqRlbfHwLy2vcvHYVlJe5hMcGJecFJtMEcik8xYueeavLym15fRcnss2n6Onzq=
+LYk3ARBDabTQRB7D1wcIOdcw6vYPHSlZ+s3yiUKrPYfHGRWlykzssvkqm1uso6fkFRbXObldX/h=
+MckXr8zotAYlq2xsbL6k5WV1R+ffdHK6k9WVv/7+tvvkWIpZy9d9Q2JTM3KZQsLyImp8hJtZELs=
+ivVrDPW1EmWRUldKTqKExyRucnKLSUp32Oq5a99hEwrM0E9mBnzOYRiDIRSBMQBAvbEli5VLjku=
+gUFNlctXSZSuLyyrTGGxWnkhf3SAuUlNpTKFU8epb7y77ZMOyVWvyFcVfDN5OpecGhce8+PIbWW=
+yef2hUz4E+Ko358ar1VlbPxCSm6KvrV66zZeYJ61q209mc+JS0+e8vFhfJ6bnsApli1+49js5bT=
+pw6AwCYtSDQT+P+0DEUWMxmGo1Go6U3NDTY2dkFBASGRcXtOdzf0LpDrav0D42qa+lw9wmipjM8=
+fIOffe751+ct4IokDI5gz6Fjnn7BR0+d40vkFXXNq9bZPvfia9u8A32Dw/PlxcERsTXGNqFU6eY=
+d6OEbHEel2di7qLTle/budXV1rampBgCgKIo+VRE2mxEMw6amprKysshksoDP12i06YzcGEpaHD=
+Xd2NbJEcmYHIG9i/uGTU4SRUlFQ8u89z6ITUqb9+5iD7+QpcvXePqHvvP+RzZ2zguWLI9JTPUPj=
+fIPidy152AYOYHB5peUVbl6+mfniciJqcmZ2QnJtOhockVFxdwh7+lbHPibI6HJZBofHw8KCoqN=
+jSs1VIWRE7v2HQ4nJ2Zm5wmlCpvNLsHh5PDoBGs753x5sbqssryu6eS5S/MWLCmvbeQVFIkK1Qy=
+2ICWDWdvSnphK5xfI8+UlWz39t3fulhfrXNx9U7Ny4qi0ju49u3t6YBh+zPqUuHMN5Nwhsaury8=
+nRsa6+gZyYksbIberoKpCX1DZ3+AZHBEfEumzzjopP9guJzGBxyQkp+4+e9AkkhUTGpmQwi8uqA=
+klkKo3pFxLJFUnDohNc3H3jkzOSaIzqxlaBRGGoMXoFhq1YY5PNEQIAHp81fgMuiqJhYWEpKSlK=
+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
+AAAAElFTkSuQmCC"><span class=3D"sender"></span></td><td valign=3D"top" styl=
+e=3D"font-family:'liberation sans';font-size:x-small;width:514px;padding:0i=
+n 5.4pt;height:10px"><p class=3D"MsoNormal" align=3D"center" style=3D"margi=
+n:0px;line-height:14.4pt;background:transparent;direction:ltr;text-align:ce=
+nter;color:#000000;font-family:'liberation sans';font-size:x-small"><span s=
+tyle=3D"font-family:'arial' , 'helvetica' , sans-serif"><b><span lang=3D"EN=
+-IN" style=3D"font-size:12pt;color:red">&nbsp;</span></b><b><span lang=3D"E=
+N-IN" style=3D"font-size:12pt;color:red">Government of India</span></b><spa=
+n style=3D"font-size:12pt;color:black"></span></span></p><p class=3D"MsoNor=
+mal" align=3D"center" style=3D"margin:0px;line-height:14.4pt;background:tra=
+nsparent;direction:ltr;text-align:center;color:#000000;font-family:'liberat=
+ion sans';font-size:x-small"><span style=3D"font-family:'arial' , 'helvetic=
+a' , sans-serif"><b><span lang=3D"EN-IN" style=3D"font-size:12pt;color:red"=
+></span></b></span><br></p><p class=3D"MsoNormal" align=3D"center" style=3D=
+"margin:0px;line-height:14.4pt;background:transparent;direction:ltr;text-al=
+ign:center;color:#000000;font-family:'liberation sans';font-size:x-small"><=
+span style=3D"font-family:'arial' , 'helvetica' , sans-serif"><b><span lang=
+=3D"EN-IN" style=3D"font-size:12pt;color:red">National Critical Information=
+ Infrastructure Protection Centre</span></b></span></p><p class=3D"MsoNorma=
+l" align=3D"center" style=3D"margin:0px;line-height:14.4pt;background:trans=
+parent;direction:ltr;text-align:center;color:#000000;font-family:'liberatio=
+n sans';font-size:x-small"><span style=3D"font-family:'arial' , 'helvetica'=
+ , sans-serif"><b><span lang=3D"EN-IN" style=3D"font-size:12pt;color:red"><=
+/span></b></span><br></p><p class=3D"MsoNormal" align=3D"center" style=3D"m=
+argin:0px;line-height:14.4pt;background:transparent;direction:ltr;text-alig=
+n:center;color:#000000;font-family:'liberation sans';font-size:x-small"><sp=
+an style=3D"font-family:'arial' , 'helvetica' , sans-serif"><b><span lang=
+=3D"EN-IN" style=3D"font-size:12pt;color:red">(A Unit of NTRO)</span></b></=
+span></p></td><td valign=3D"top" align=3D"right" style=3D"font-family:'libe=
+ration sans';font-size:x-small;width:244px;padding:0in 5.4pt;height:10px"><=
+p class=3D"MsoNormal" style=3D"margin:0px;line-height:19.2px;background:tra=
+nsparent;direction:ltr;text-align:center;color:#000000;font-family:'liberat=
+ion sans';font-size:x-small"><img src=3D"cid:5fe1cbab6af7c5b5c192017ba39af4=
+15daada4f8@zimbra" data-mce-src=3D"cid:5fe1cbab6af7c5b5c192017ba39af415daad=
+a4f8@zimbra"></p></td></tr><tr style=3D"font-family:'liberation sans';font-=
+size:x-small;height:34px"><td valign=3D"top" style=3D"font-family:'liberati=
+on sans';font-size:x-small;width:122px;padding:0in 5.4pt;height:34px"></td>=
+<td valign=3D"top" style=3D"font-family:'liberation sans';font-size:x-small=
+;width:514px;padding:0in 5.4pt;height:34px"></td><td valign=3D"top" style=
+=3D"font-family:'liberation sans';font-size:x-small;width:244px;padding:0in=
+ 5.4pt;height:34px"><p class=3D"MsoNormal" align=3D"right" style=3D"margin:=
+0px;line-height:normal;background:transparent;direction:ltr;text-align:righ=
+t;color:#000000;font-family:'liberation sans';font-size:x-small"><span styl=
+e=3D"font-family:'arial' , 'helvetica' , sans-serif"><b><span style=3D"font=
+-size:12pt">Date: 29 Jan <span class=3D"Object" id=3D"OBJ_PREFIX_DWT1365_co=
+m_zimbra_date" style=3D"color:#005a95;text-decoration:none"><span class=3D"=
+Object" id=3D"OBJ_PREFIX_DWT1366_com_zimbra_date" style=3D"color:#005a95;te=
+xt-decoration:none"><span class=3D"Object" id=3D"OBJ_PREFIX_DWT443_com_zimb=
+ra_date" style=3D"color:#005a95;text-decoration:none"><span class=3D"Object=
+" id=3D"OBJ_PREFIX_DWT445_com_zimbra_date" style=3D"color:#005a95;text-deco=
+ration:none"><span style=3D"color:#000000"><span class=3D"Object" id=3D"OBJ=
+_PREFIX_DWT1837_com_zimbra_date" style=3D"color:#005a95;text-decoration:non=
+e">2024</span></span></span></span></span></span></span></b></span></p></td=
+></tr><tr style=3D"font-family:'liberation sans';font-size:x-small;height:1=
+0px"><td colspan=3D"3" valign=3D"top" style=3D"width:880px;padding:0in 5.4p=
+t;height:10px"><div align=3D"justify" style=3D"font-family:'verdana' , 'ari=
+al' , 'helvetica' , sans-serif;font-size:14px;text-indent:0px;background-co=
+lor:#ffffff"><div align=3D"justify" style=3D"text-indent:0px;background-col=
+or:#ffffff"><div align=3D"justify" style=3D"text-indent:0px;background-colo=
+r:#ffffff"><div align=3D"justify" style=3D"text-indent:0px;background-color=
+:#ffffff"><div align=3D"justify" style=3D"text-indent:0px;background-color:=
+#ffffff"><div align=3D"justify" style=3D"text-indent:0px;background-color:#=
+ffffff"><div align=3D"justify" style=3D"text-indent:0px;background-color:#f=
+fffff"><div align=3D"justify"><div align=3D"justify"><div align=3D"justify"=
+><div align=3D"justify"><div align=3D"justify"><div align=3D"justify"><div =
+align=3D"justify"><div align=3D"justify"><div align=3D"justify"><div align=
+=3D"justify"><div align=3D"justify"><div align=3D"justify"><div align=3D"ju=
+stify"><div align=3D"justify"><div align=3D"justify"><div align=3D"justify"=
+><div align=3D"justify"><div align=3D"justify"><div align=3D"justify"><div =
+align=3D"justify"><div align=3D"justify"><div style=3D"text-align:justify;t=
+ext-indent:0px;background-color:#ffffff"><div style=3D"text-align:justify;t=
+ext-indent:0px;background-color:#ffffff"><div style=3D"text-align:left;text=
+-indent:0px;background-color:#ffffff"><div style=3D"text-align:left;text-in=
+dent:0px;background-color:#ffffff"><div style=3D"background-color:#ffffff">=
+<div style=3D"text-align:justify;text-indent:0px;background-color:#ffffff">=
+<div align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><=
+div align=3D"justify" style=3D"text-align:justify;text-indent:0px;backgroun=
+d-color:#ffffff"><div align=3D"justify" style=3D"text-align:justify;text-in=
+dent:0px;background-color:#ffffff"><div style=3D"text-align:justify;text-in=
+dent:0px;background-color:#ffffff"><div style=3D"text-align:left;text-inden=
+t:0px;background-color:#ffffff"><div style=3D"text-align:left;text-indent:0=
+px;background-color:#ffffff"><div style=3D"background-color:#ffffff"><div a=
+lign=3D"justify"><div align=3D"justify"><div align=3D"justify"><div align=
+=3D"justify"><div align=3D"justify"><div align=3D"justify"><div style=3D"te=
+xt-align:justify;text-indent:0px;background-color:#ffffff"><div style=3D"te=
+xt-align:justify;text-indent:0px;background-color:#ffffff"><div style=3D"te=
+xt-align:left;text-indent:0px;background-color:#ffffff"><div style=3D"text-=
+align:left;text-indent:0px;background-color:#ffffff"><div style=3D"backgrou=
+nd-color:#ffffff"><div style=3D"text-align:justify;text-indent:0px;backgrou=
+nd-color:#ffffff"><div align=3D"justify" style=3D"text-indent:0px;backgroun=
+d-color:#ffffff"><div align=3D"justify" style=3D"text-align:justify;text-in=
+dent:0px;background-color:#ffffff"><div align=3D"justify" style=3D"text-ali=
+gn:justify;text-indent:0px;background-color:#ffffff"><div align=3D"justify"=
+ style=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div=
+ align=3D"justify" style=3D"text-align:justify;text-indent:0px;background-c=
+olor:#ffffff"><div style=3D"text-align:justify;text-indent:0px;background-c=
+olor:#ffffff"><div style=3D"text-align:justify;text-indent:0px;background-c=
+olor:#ffffff"><div style=3D"text-align:justify;text-indent:0px;background-c=
+olor:#ffffff"><div style=3D"text-align:justify;text-indent:0px"><div style=
+=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div style=
+=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div style=
+=3D"text-align:justify;text-indent:0px"><div style=3D"text-align:justify;te=
+xt-indent:0px;background-color:#ffffff"><div style=3D"text-align:justify;te=
+xt-indent:0px"><div style=3D"text-align:justify;text-indent:0px;background-=
+color:#ffffff"><div style=3D"text-align:justify;text-indent:0px"><div style=
+=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div style=
+=3D"text-align:justify;text-indent:0px"><div style=3D"text-align:justify;te=
+xt-indent:0px;background-color:#ffffff"><div style=3D"text-align:justify;te=
+xt-indent:0px"><div style=3D"text-align:justify;text-indent:0px;background-=
+color:#ffffff"><div style=3D"text-align:justify;text-indent:0px;background-=
+color:#ffffff"><div style=3D"text-align:justify;text-indent:0px"><div style=
+=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div style=
+=3D"text-align:justify;text-indent:0px"><div style=3D"text-align:justify;te=
+xt-indent:0px;background-color:#ffffff"><div align=3D"justify" style=3D"tex=
+t-indent:0px;background-color:#ffffff"><div align=3D"justify"><div align=3D=
+"justify" style=3D"text-indent:0px;background-color:#ffffff"><div align=3D"=
+justify"><div align=3D"justify"><div align=3D"justify"><div align=3D"justif=
+y"><div align=3D"justify"><div align=3D"justify"><div align=3D"justify"><di=
+v align=3D"justify"><div align=3D"justify"><div align=3D"justify"><div alig=
+n=3D"justify"><div align=3D"justify"><div align=3D"justify"><div align=3D"j=
+ustify"><div align=3D"justify"><div align=3D"justify"><div align=3D"justify=
+"><div style=3D"text-align:justify;text-indent:0px;background-color:#ffffff=
+"><div style=3D"text-align:justify;text-indent:0px;background-color:#ffffff=
+"><div style=3D"text-align:left;text-indent:0px;background-color:#ffffff"><=
+div style=3D"text-align:left;text-indent:0px;background-color:#ffffff"><div=
+ style=3D"background-color:#ffffff"><div style=3D"text-align:justify;text-i=
+ndent:0px;background-color:#ffffff"><div align=3D"justify" style=3D"text-in=
+dent:0px;background-color:#ffffff"><div align=3D"justify" style=3D"text-ali=
+gn:justify;text-indent:0px;background-color:#ffffff"><div align=3D"justify"=
+ style=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div=
+ style=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div=
+ style=3D"text-align:left;text-indent:0px;background-color:#ffffff"><div st=
+yle=3D"text-align:left;text-indent:0px;background-color:#ffffff"><div style=
+=3D"background-color:#ffffff"><div align=3D"justify"><div align=3D"justify"=
+><div align=3D"justify"><div align=3D"justify"><div align=3D"justify"><div =
+align=3D"justify"><div style=3D"text-align:justify;text-indent:0px;backgrou=
+nd-color:#ffffff"><div style=3D"text-align:justify;text-indent:0px;backgrou=
+nd-color:#ffffff"><div style=3D"text-align:left;text-indent:0px;background-=
+color:#ffffff"><div style=3D"text-align:left;text-indent:0px;background-col=
+or:#ffffff"><div style=3D"background-color:#ffffff"><div style=3D"text-alig=
+n:justify;text-indent:0px;background-color:#ffffff"><div align=3D"justify" =
+style=3D"text-indent:0px;background-color:#ffffff"><div align=3D"justify" s=
+tyle=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div a=
+lign=3D"justify" style=3D"text-align:justify;text-indent:0px;background-col=
+or:#ffffff"><div align=3D"justify" style=3D"text-align:justify;text-indent:=
+0px;background-color:#ffffff"><div align=3D"justify" style=3D"text-align:ju=
+stify;text-indent:0px;background-color:#ffffff"><div style=3D"text-align:ju=
+stify;text-indent:0px;background-color:#ffffff"><div style=3D"text-align:ju=
+stify;text-indent:0px;background-color:#ffffff"><div style=3D"text-align:ju=
+stify;text-indent:0px;background-color:#ffffff"><div style=3D"text-align:ju=
+stify;text-indent:0px"><div style=3D"text-align:justify;text-indent:0px;bac=
+kground-color:#ffffff"><div style=3D"text-align:justify;text-indent:0px;bac=
+kground-color:#ffffff"><div style=3D"text-align:justify;text-indent:0px"><d=
+iv style=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><d=
+iv style=3D"text-align:justify;text-indent:0px"><div style=3D"text-align:ju=
+stify;text-indent:0px;background-color:#ffffff"><div style=3D"text-align:ju=
+stify;text-indent:0px"><div style=3D"text-align:justify;text-indent:0px;bac=
+kground-color:#ffffff"><div style=3D"text-align:justify;text-indent:0px"><d=
+iv style=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><d=
+iv style=3D"text-align:justify;text-indent:0px"><div style=3D"text-align:ju=
+stify;text-indent:0px;background-color:#ffffff"><div style=3D"text-align:ju=
+stify;text-indent:0px;background-color:#ffffff"><div style=3D"text-align:ju=
+stify;text-indent:0px"><div style=3D"text-align:justify;text-indent:0px;bac=
+kground-color:#ffffff"><div style=3D"text-align:justify;text-indent:0px"><d=
+iv style=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><b=
+r></div></div></div></div></div></div></div></div></div></div></div></div><=
+/div></div></div></div></div></div></div></div></div></div></div></div></di=
+v></div></div></div></div></div></div></div></div></div></div></div></div><=
+/div></div></div></div></div></div></div></div></div></div></div></div></di=
+v></div></div></div></div></div></div></div></div></div></div></div></div><=
+/div></div></div></div></div></div></div></div></div></div></div></div></di=
+v></div></div></div></div></div></div></div></div></div></div></div></div><=
+/div></div></div></div></div></div></div></div></div></div></div></div></di=
+v></div></div></div></div></div></div></div></div></div></div></div></div><=
+/div></div></div></div></div></div></div></div></div></div></div></div></di=
+v></div></div></div></div></div></div></div></div></div></div></div></div><=
+/div></div></div></div></div></div></div></div></div></div></div></div></di=
+v><div align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"=
+><div align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff">=
+<div align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><=
+div align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><d=
+iv align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><di=
+v align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div=
+ align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div =
+align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div a=
+lign=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div al=
+ign=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div ali=
+gn=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div alig=
+n=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div align=
+=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div align=
+=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div align=
+=3D"justify"><div align=3D"justify"><div align=3D"justify"><div align=3D"ju=
+stify"><div align=3D"justify"><div align=3D"justify"><div align=3D"justify"=
+><div align=3D"justify"><div align=3D"justify"><div align=3D"justify"><div =
+align=3D"justify"><div align=3D"justify"><div align=3D"justify"><div align=
+=3D"justify"><div align=3D"justify"><div align=3D"justify"><div align=3D"ju=
+stify"><div align=3D"justify"><div align=3D"justify"><div align=3D"justify"=
+><div align=3D"justify"><div style=3D"text-align:justify;text-indent:0px;ba=
+ckground-color:#ffffff"><div style=3D"text-align:justify;text-indent:0px;ba=
+ckground-color:#ffffff"><div style=3D"text-align:left;text-indent:0px;backg=
+round-color:#ffffff"><div style=3D"text-align:left;text-indent:0px;backgrou=
+nd-color:#ffffff"><div style=3D"background-color:#ffffff"><div style=3D"tex=
+t-align:justify;text-indent:0px;background-color:#ffffff"><div align=3D"jus=
+tify" style=3D"text-indent:0px;background-color:#ffffff"><div align=3D"just=
+ify" style=3D"text-align:justify;text-indent:0px;background-color:#ffffff">=
+<div align=3D"justify" style=3D"text-align:justify;text-indent:0px;backgrou=
+nd-color:#ffffff"><div style=3D"text-align:justify;text-indent:0px;backgrou=
+nd-color:#ffffff"><div style=3D"text-align:left;text-indent:0px;background-=
+color:#ffffff"><div style=3D"text-align:left;text-indent:0px;background-col=
+or:#ffffff"><div style=3D"background-color:#ffffff"><div align=3D"justify">=
+<div align=3D"justify"><div align=3D"justify"><div align=3D"justify"><div a=
+lign=3D"justify"><div align=3D"justify"><div style=3D"text-align:justify;te=
+xt-indent:0px;background-color:#ffffff"><div style=3D"text-align:justify;te=
+xt-indent:0px;background-color:#ffffff"><div style=3D"text-align:left;text-=
+indent:0px;background-color:#ffffff"><div style=3D"text-align:left;text-ind=
+ent:0px;background-color:#ffffff"><div style=3D"background-color:#ffffff"><=
+div style=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><=
+div align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><d=
+iv align=3D"justify" style=3D"text-align:justify;text-indent:0px;background=
+-color:#ffffff"><div align=3D"justify" style=3D"text-align:justify;text-ind=
+ent:0px;background-color:#ffffff"><div align=3D"justify" style=3D"text-alig=
+n:justify;text-indent:0px;background-color:#ffffff"><div align=3D"justify" =
+style=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div =
+style=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div =
+style=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div =
+style=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div =
+style=3D"text-align:justify;text-indent:0px"><div style=3D"text-align:justi=
+fy;text-indent:0px;background-color:#ffffff"><div style=3D"text-align:justi=
+fy;text-indent:0px;background-color:#ffffff"><div style=3D"text-align:justi=
+fy;text-indent:0px"><div style=3D"text-align:justify;text-indent:0px;backgr=
+ound-color:#ffffff"><div style=3D"text-align:justify;text-indent:0px"><div =
+style=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div =
+style=3D"text-align:justify;text-indent:0px"><div style=3D"text-align:justi=
+fy;text-indent:0px;background-color:#ffffff"><div style=3D"text-align:justi=
+fy;text-indent:0px"><div style=3D"text-align:justify;text-indent:0px;backgr=
+ound-color:#ffffff"><div style=3D"text-align:justify;text-indent:0px"><div =
+style=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div =
+style=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div =
+style=3D"text-align:justify;text-indent:0px"><div style=3D"text-align:justi=
+fy;text-indent:0px;background-color:#ffffff"><div style=3D"text-align:justi=
+fy;text-indent:0px"><div style=3D"text-align:justify;text-indent:0px;backgr=
+ound-color:#ffffff"><div align=3D"justify" style=3D"text-indent:0px;backgro=
+und-color:#ffffff"><div align=3D"justify"><div align=3D"justify" style=3D"t=
+ext-indent:0px;background-color:#ffffff"><div align=3D"justify"><div align=
+=3D"justify"><div align=3D"justify"><div align=3D"justify"><div align=3D"ju=
+stify"><div align=3D"justify"><div align=3D"justify"><div align=3D"justify"=
+><div align=3D"justify"><div align=3D"justify"><div align=3D"justify"><div =
+align=3D"justify"><div align=3D"justify"><div align=3D"justify"><div align=
+=3D"justify"><div align=3D"justify"><div align=3D"justify"><div style=3D"te=
+xt-align:justify;text-indent:0px;background-color:#ffffff"><div style=3D"te=
+xt-align:justify;text-indent:0px;background-color:#ffffff"><div style=3D"te=
+xt-align:left;text-indent:0px;background-color:#ffffff"><div style=3D"text-=
+align:left;text-indent:0px;background-color:#ffffff"><div style=3D"backgrou=
+nd-color:#ffffff"><div style=3D"text-align:justify;text-indent:0px;backgrou=
+nd-color:#ffffff"><div align=3D"justify" style=3D"text-indent:0px;backgroun=
+d-color:#ffffff"><div align=3D"justify" style=3D"text-align:justify;text-in=
+dent:0px;background-color:#ffffff"><div align=3D"justify" style=3D"text-ali=
+gn:justify;text-indent:0px;background-color:#ffffff"><div style=3D"text-ali=
+gn:justify;text-indent:0px;background-color:#ffffff"><div style=3D"text-ali=
+gn:left;text-indent:0px;background-color:#ffffff"><div style=3D"text-align:=
+left;text-indent:0px;background-color:#ffffff"><div style=3D"background-col=
+or:#ffffff"><div align=3D"justify"><div align=3D"justify"><div align=3D"jus=
+tify"><div align=3D"justify"><div align=3D"justify"><div align=3D"justify">=
+<div style=3D"text-align:justify;text-indent:0px;background-color:#ffffff">=
+<div style=3D"text-align:justify;text-indent:0px;background-color:#ffffff">=
+<div style=3D"text-align:left;text-indent:0px;background-color:#ffffff"><di=
+v style=3D"text-align:left;text-indent:0px;background-color:#ffffff"><div s=
+tyle=3D"background-color:#ffffff"><div style=3D"text-align:justify;text-ind=
+ent:0px;background-color:#ffffff"><div align=3D"justify" style=3D"text-inde=
+nt:0px;background-color:#ffffff"><div align=3D"justify" style=3D"text-align=
+:justify;text-indent:0px;background-color:#ffffff"><div align=3D"justify" s=
+tyle=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div a=
+lign=3D"justify" style=3D"text-align:justify;text-indent:0px;background-col=
+or:#ffffff"><div align=3D"justify" style=3D"text-align:justify;text-indent:=
+0px;background-color:#ffffff"><div style=3D"text-align:justify;text-indent:=
+0px;background-color:#ffffff"><div style=3D"text-align:justify;text-indent:=
+0px;background-color:#ffffff"><div style=3D"text-align:justify;text-indent:=
+0px;background-color:#ffffff"><div style=3D"text-align:justify;text-indent:=
+0px"><div style=3D"text-align:justify;text-indent:0px;background-color:#fff=
+fff"><div style=3D"text-align:justify;text-indent:0px;background-color:#fff=
+fff"><div style=3D"text-align:justify;text-indent:0px"><div style=3D"text-a=
+lign:justify;text-indent:0px;background-color:#ffffff"><div style=3D"text-a=
+lign:justify;text-indent:0px"><div style=3D"text-align:justify;text-indent:=
+0px;background-color:#ffffff"><div style=3D"text-align:justify;text-indent:=
+0px"><div style=3D"text-align:justify;text-indent:0px;background-color:#fff=
+fff"><div style=3D"text-align:justify;text-indent:0px"><div style=3D"text-a=
+lign:justify;text-indent:0px;background-color:#ffffff"><div style=3D"text-a=
+lign:justify;text-indent:0px"><div style=3D"text-align:justify;text-indent:=
+0px;background-color:#ffffff"><div style=3D"text-align:justify;text-indent:=
+0px;background-color:#ffffff"><div style=3D"text-align:justify;text-indent:=
+0px"><div style=3D"text-align:justify;text-indent:0px;background-color:#fff=
+fff"><div style=3D"text-align:justify;text-indent:0px"><div style=3D"text-a=
+lign:justify;text-indent:0px;background-color:#ffffff"><div align=3D"justif=
+y" style=3D"text-indent:0px;background-color:#ffffff"><div align=3D"justify=
+" style=3D"text-indent:0px;background-color:#ffffff"><div align=3D"justify"=
+ style=3D"text-indent:0px;background-color:#ffffff"><div align=3D"justify" =
+style=3D"text-indent:0px;background-color:#ffffff"><div align=3D"justify" s=
+tyle=3D"text-indent:0px;background-color:#ffffff"><div align=3D"justify" st=
+yle=3D"text-indent:0px;background-color:#ffffff"><div align=3D"justify"><di=
+v align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div=
+ align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div =
+align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div a=
+lign=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div al=
+ign=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div ali=
+gn=3D"justify"><div style=3D"text-align:justify;text-indent:0px"><div style=
+=3D"text-indent:0px;background-color:#ffffff;text-align:center"><div style=
+=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div style=
+=3D"text-indent:0px;background-color:#ffffff"><br></div><div style=3D"text-=
+indent:0px;background-color:#ffffff"><h4 style=3D"color:#000000;font-family=
+:'verdana' , 'arial' , 'helvetica' , sans-serif;font-size:14px;font-style:n=
+ormal;font-weight:400;letter-spacing:normal;text-transform:none;word-spacin=
+g:0px;white-space:normal;text-align:center"><span style=3D"font-family:'hel=
+vetica' , sans-serif;font-size:12pt"><strong style=3D"text-align:center"><s=
+pan style=3D"color:#4f81bd"><span style=3D"letter-spacing:-0.4pt"><b>Adviso=
+ry No: Adv/2024/Jan/072</b></span></span></strong></span></h4><h4 style=3D"=
+text-align:center"><span style=3D"color:#000000;font-family:'helvetica' , s=
+ans-serif;font-size:12pt;font-style:normal;font-weight:400;letter-spacing:n=
+ormal;text-transform:none;word-spacing:0px;white-space:normal"><span style=
+=3D"text-align:center"><strong><span style=3D"color:#4f81bd"><span style=3D=
+"letter-spacing:-0.4pt"><b>Cyber Security Advisory:&nbsp;</b></span></span>=
+</strong></span></span><font color=3D"#4f81bd" face=3D"helvetica, sans-seri=
+f"><span style=3D"font-size:16px;letter-spacing:-0.533333px">Malicious IPs&=
+nbsp;</span></font></h4><h4 style=3D"color:#000000;font-family:'verdana' , =
+'arial' , 'helvetica' , sans-serif;font-size:14px;font-style:normal;font-we=
+ight:400;letter-spacing:normal;text-transform:none;word-spacing:0px;white-s=
+pace:normal;text-align:center"><span style=3D"font-family:'helvetica' , san=
+s-serif;font-size:12pt"><span style=3D"font-weight:bold;text-align:center">=
+<span style=3D"font-weight:normal">This data is to be considered as</span><=
+/span><span style=3D"font-weight:bold;text-align:center;color:#ffffff"><spa=
+n style=3D"font-weight:normal">&nbsp;</span></span><span style=3D"font-weig=
+ht:bold;text-align:center;background-color:#000000;color:#ff9900"><strong><=
+b>TLP: AMBER</b></strong></span></span></h4><div><div><span style=3D"font-f=
+amily:'helvetica' , sans-serif;font-size:12pt">It has been reported that at=
+tached IOCs are active in Indian CyberSpace.</span><strong style=3D"font-fa=
+mily:'helvetica' , sans-serif;font-size:12pt"></strong></div><div><span sty=
+le=3D"font-family:'helvetica' , sans-serif"><span style=3D"font-size:16px">=
+<br></span></span></div><div><div><span style=3D"font-family:'helvetica' , =
+sans-serif"><span style=3D"font-size:16px"><b>IOCs: IOC_Adv2024Jan072.txt a=
+ttached</b></span></span></div><br></div><div><span style=3D"font-family:'h=
+elvetica' , sans-serif"><span style=3D"font-size:16px"></span></span><div><=
+span style=3D"font-family:'helvetica' , sans-serif;font-size:12pt"><strong>=
+Recommendation:</strong></span><span style=3D"font-family:'helvetica' , san=
+s-serif;font-size:12pt"><strong></strong></span></div><div><ul><li><span st=
+yle=3D"font-family:'helvetica' , sans-serif"><span style=3D"font-size:16px"=
+>It is recommended that organisations should apply the attached IoCs on the=
+ir security systems to identify attacks. Occurrence of any communication tr=
+aces pertaining to these IoCs may be reported to NCIIPC.</span></span><br><=
+/li></ul></div><div><span style=3D"font-family:'helvetica' , sans-serif;fon=
+t-size:12pt"><br></span></div><div><span style=3D"font-family:'helvetica' ,=
+ sans-serif;font-size:12pt">This document is distributed as TLP: AMBER. Lim=
+ited disclosure, recipients can only spread this on a need-to-know basis wi=
+thin their organization and its clients. Sources may use TLP: AMBER when in=
+formation requires support to be effectively acted upon, yet carries risk t=
+o privacy, reputation, or operations if shared outside of the organizations=
+ involved. Recipients may share TLP: AMBER information with members of thei=
+r own organization and its clients, but only on a need-to-know basis to pro=
+tect their organization and its clients and prevent further harm.</span><sp=
+an style=3D"font-family:'helvetica' , sans-serif;font-size:12pt"></span></d=
+iv><div><span style=3D"font-family:'helvetica' , sans-serif;font-size:12pt"=
+> </span></div><div><span style=3D"font-family:'helvetica' , sans-serif;fon=
+t-size:12pt"></span><br></div></div></div></div><div style=3D"text-indent:0=
+px;background-color:#ffffff"><b><strong style=3D"font-weight:bold;font-fami=
+ly:'liberation sans';font-size:x-small"><span style=3D"font-size:16px"><spa=
+n style=3D"font-family:'helvetica' , sans-serif;font-size:12pt"></span></sp=
+an></strong></b><br></div><div style=3D"text-indent:0px;background-color:#f=
+fffff"><b><strong style=3D"font-weight:bold;font-family:'liberation sans';f=
+ont-size:x-small"><span style=3D"font-size:16px"><span style=3D"font-family=
+:'helvetica' , sans-serif;font-size:12pt">Disclaimer:</span></span></strong=
+></b></div><div style=3D"text-indent:0px;background-color:#ffffff"><span st=
+yle=3D"font-family:'helvetica' , sans-serif;font-size:16px"></span><br></di=
+v><div style=3D"text-indent:0px;background-color:#ffffff"><span style=3D"fo=
+nt-family:'helvetica' , sans-serif;font-size:16px">The information provided=
+ by NCIIPC above is on "as is" basis only.&nbsp;System owners are advised t=
+o independently&nbsp;evaluate the contents for its applicability in their s=
+pecific&nbsp;environment, and take appropriate action as per their own asse=
+ssment&nbsp;of the implications of the alert/ advisory on their systems. NC=
+IIPC&nbsp;will not be liable for any issues or problems that may arise from=
+&nbsp;application or non-application of the alert/ advisory. System owners&=
+nbsp;are wholly responsible for cyber security updates to their&nbsp;inform=
+ation technology systems.</span></div><div style=3D"text-indent:0px;backgro=
+und-color:#ffffff"><b><strong style=3D"font-weight:bold"><span style=3D"fon=
+t-size:12pt;font-family:'helvetica' , sans-serif"></span></strong></b><br><=
+/div><div style=3D"text-indent:0px;background-color:#ffffff"><b><strong sty=
+le=3D"font-weight:bold"><span style=3D"font-size:12pt;font-family:'helvetic=
+a' , sans-serif">With Best Regards,</span></strong></b></div><div style=3D"=
+text-indent:0px;background-color:#ffffff"><b><strong style=3D"font-weight:b=
+old"><span style=3D"font-size:12pt;font-family:'helvetica' , sans-serif">Kn=
+owledge Management System</span></strong></b></div><div style=3D"text-inden=
+t:0px;background-color:#ffffff"><b><strong style=3D"font-weight:bold"><span=
+ style=3D"font-size:12pt;font-family:'helvetica' , sans-serif">National Cri=
+tical Information Infrastructure Protection Centre</span></strong></b></div=
+><div style=3D"text-indent:0px;background-color:#ffffff"><b><strong style=
+=3D"font-weight:bold"><span style=3D"font-size:12pt;font-family:'helvetica'=
+ , sans-serif">Block-III, Old JNU Campus, New Delhi - 110067</span></strong=
+></b></div><div style=3D"text-indent:0px;background-color:#ffffff"><b><stro=
+ng style=3D"font-weight:bold"><span style=3D"font-size:12pt;font-family:'he=
+lvetica' , sans-serif">Website:&nbsp;<a href=3D"http://www.nciipc.gov.in/" =
+rel=3D"nofollow noopener noreferrer nofollow noopener noreferrer nofollow n=
+oopener noreferrer nofollow noopener noreferrer nofollow noopener noreferre=
+r nofollow noopener noreferrer nofollow noopener noreferrer nofollow noopen=
+er noreferrer nofollow noopener noreferrer nofollow noopener noreferrer nof=
+ollow noopener noreferrer nofollow noopener noreferrer nofollow noopener no=
+referrer nofollow noopener noreferrer nofollow noopener noreferrer nofollow=
+ noopener noreferrer nofollow noopener noreferrer nofollow noopener norefer=
+rer nofollow noopener noreferrer nofollow noopener noreferrer nofollow noop=
+ener noreferrer nofollow noopener noreferrer nofollow noopener noreferrer n=
+ofollow noopener noreferrer nofollow noopener noreferrer nofollow noopener =
+noreferrer nofollow noopener noreferrer nofollow noopener noreferrer nofoll=
+ow noopener noreferrer nofollow noopener noreferrer nofollow noopener noref=
+errer nofollow noopener noreferrer nofollow noopener noreferrer nofollow no=
+opener noreferrer nofollow noopener noreferrer nofollow noopener noreferrer=
+ nofollow noopener noreferrer nofollow noopener noreferrer nofollow noopene=
+r noreferrer nofollow noopener noreferrer nofollow noopener noreferrer nofo=
+llow noopener noreferrer nofollow noopener noreferrer nofollow noopener nor=
+eferrer nofollow noopener noreferrer nofollow noopener noreferrer nofollow =
+noopener noreferrer nofollow noopener noreferrer nofollow noopener noreferr=
+er nofollow noopener noreferrer nofollow noopener noreferrer nofollow noope=
+ner noreferrer nofollow noopener noreferrer nofollow noopener noreferrer no=
+follow noopener noreferrer nofollow noopener noreferrer nofollow noopener n=
+oreferrer nofollow noopener noreferrer nofollow noopener noreferrer nofollo=
+w noopener noreferrer nofollow noopener noreferrer nofollow noopener norefe=
+rrer nofollow noopener noreferrer nofollow noopener noreferrer nofollow noo=
+pener noreferrer nofollow noopener noreferrer nofollow noopener noreferrer =
+nofollow noopener noreferrer nofollow noopener noreferrer nofollow noopener=
+ noreferrer nofollow noopener noreferrer nofollow noopener noreferrer nofol=
+low noopener noreferrer nofollow noopener noreferrer nofollow noopener nore=
+ferrer nofollow noopener noreferrer nofollow noopener noreferrer nofollow n=
+oopener noreferrer nofollow noopener noreferrer nofollow noopener noreferre=
+r nofollow noopener noreferrer nofollow noopener noreferrer nofollow noopen=
+er noreferrer nofollow noopener noreferrer nofollow noopener noreferrer nof=
+ollow noopener noreferrer nofollow noopener noreferrer nofollow noopener no=
+referrer nofollow noopener noreferrer nofollow noopener noreferrer nofollow=
+ noopener noreferrer nofollow noopener noreferrer nofollow noopener norefer=
+rer nofollow noopener noreferrer nofollow noopener noreferrer nofollow noop=
+ener noreferrer nofollow noopener noreferrer nofollow noopener noreferrer n=
+ofollow noopener noreferrer nofollow noopener noreferrer nofollow noopener =
+noreferrer nofollow noopener noreferrer nofollow noopener noreferrer nofoll=
+ow noopener noreferrer nofollow noopener noreferrer nofollow noopener noref=
+errer nofollow noopener noreferrer nofollow noopener noreferrer nofollow no=
+opener noreferrer nofollow noopener noreferrer nofollow noopener noreferrer=
+ nofollow noopener noreferrer nofollow noopener noreferrer nofollow noopene=
+r noreferrer nofollow noopener noreferrer nofollow noopener noreferrer nofo=
+llow noopener noreferrer nofollow noopener noreferrer nofollow noopener nor=
+eferrer nofollow noopener noreferrer nofollow noopener noreferrer nofollow =
+noopener noreferrer nofollow noopener noreferrer nofollow noopener noreferr=
+er nofollow noopener noreferrer nofollow noopener noreferrer nofollow noope=
+ner noreferrer nofollow noopener noreferrer nofollow noopener noreferrer no=
+follow noopener noreferrer nofollow noopener noreferrer nofollow noopener n=
+oreferrer nofollow noopener noreferrer nofollow noopener noreferrer nofollo=
+w noopener noreferrer nofollow noopener noreferrer nofollow noopener norefe=
+rrer nofollow noopener noreferrer nofollow noopener noreferrer nofollow noo=
+pener noreferrer nofollow noopener noreferrer nofollow noopener noreferrer =
+nofollow noopener noreferrer nofollow noopener noreferrer nofollow noopener=
+ noreferrer nofollow noopener noreferrer nofollow noopener noreferrer nofol=
+low noopener noreferrer nofollow noopener noreferrer nofollow noopener nore=
+ferrer nofollow noopener noreferrer nofollow noopener noreferrer nofollow n=
+oopener noreferrer nofollow noopener noreferrer nofollow noopener noreferre=
+r nofollow noopener noreferrer nofollow noopener noreferrer nofollow noopen=
+er noreferrer nofollow noopener noreferrer nofollow noopener noreferrer nof=
+ollow noopener noreferrer nofollow noopener noreferrer nofollow noopener no=
+referrer nofollow noopener noreferrer nofollow noopener noreferrer nofollow=
+ noopener noreferrer nofollow noopener noreferrer nofollow noopener norefer=
+rer nofollow noopener noreferrer nofollow noopener noreferrer nofollow noop=
+ener noreferrer nofollow noopener noreferrer nofollow noopener noreferrer n=
+ofollow noopener noreferrer nofollow noopener noreferrer nofollow noopener =
+noreferrer nofollow noopener noreferrer nofollow noopener noreferrer nofoll=
+ow noopener noreferrer nofollow noopener noreferrer nofollow noopener noref=
+errer nofollow noopener noreferrer nofollow noopener noreferrer nofollow no=
+opener noreferrer nofollow noopener noreferrer nofollow noopener noreferrer=
+ nofollow noopener noreferrer nofollow noopener noreferrer nofollow noopene=
+r noreferrer nofollow noopener noreferrer nofollow noopener noreferrer nofo=
+llow noopener noreferrer nofollow noopener noreferrer nofollow noopener nor=
+eferrer nofollow noopener noreferrer nofollow noopener noreferrer nofollow =
+noopener noreferrer nofollow noopener noreferrer nofollow noopener noreferr=
+er nofollow noopener noreferrer nofollow noopener noreferrer nofollow noope=
+ner noreferrer nofollow noopener noreferrer nofollow noopener noreferrer no=
+follow noopener noreferrer nofollow noopener noreferrer nofollow noopener n=
+oreferrer nofollow noopener noreferrer nofollow noopener noreferrer nofollo=
+w noopener noreferrer nofollow noopener noreferrer nofollow noopener norefe=
+rrer nofollow noopener noreferrer nofollow noopener noreferrer nofollow noo=
+pener noreferrer nofollow noopener noreferrer nofollow noopener noreferrer =
+nofollow noopener noreferrer nofollow noopener noreferrer nofollow noopener=
+ noreferrer nofollow noopener noreferrer nofollow noopener noreferrer nofol=
+low noopener noreferrer nofollow noopener noreferrer nofollow noopener nore=
+ferrer nofollow noopener noreferrer nofollow noopener noreferrer nofollow n=
+oopener noreferrer nofollow noopener noreferrer nofollow noopener noreferre=
+r nofollow noopener noreferrer nofollow noopener noreferrer nofollow noopen=
+er noreferrer nofollow noopener noreferrer nofollow noopener noreferrer nof=
+ollow noopener noreferrer nofollow noopener noreferrer nofollow noopener no=
+referrer nofollow noopener noreferrer nofollow noopener noreferrer nofollow=
+ noopener noreferrer nofollow noopener noreferrer nofollow noopener norefer=
+rer nofollow noopener noreferrer nofollow noopener noreferrer nofollow noop=
+ener noreferrer nofollow noopener noreferrer nofollow noopener noreferrer n=
+ofollow noopener noreferrer nofollow noopener noreferrer nofollow noopener =
+noreferrer nofollow noopener noreferrer nofollow noopener noreferrer nofoll=
+ow noopener noreferrer nofollow noopener noreferrer nofollow noopener noref=
+errer nofollow noopener noreferrer nofollow noopener noreferrer nofollow no=
+opener noreferrer nofollow noopener noreferrer nofollow noopener noreferrer=
+ nofollow noopener noreferrer nofollow noopener noreferrer nofollow noopene=
+r noreferrer" style=3D"color:#0000ff;text-decoration:none" target=3D"_blank=
+">www.nciipc.gov.in</a></span></strong></b><br></div><div style=3D"text-ind=
+ent:0px;background-color:#ffffff"><span style=3D"font-family:'helvetica' , =
+sans-serif"><span style=3D"font-family:'helvetica' , sans-serif"><span styl=
+e=3D"font-family:'helvetica' , sans-serif"><span style=3D"font-size:16px"><=
+b>Toll Free: 1800-11-4430</b></span></span></span></span><p class=3D"MsoNor=
+mal" style=3D"margin:0px;line-height:19.2px;background:transparent;directio=
+n:ltr;color:#000000;font-family:'liberation sans';font-size:x-small;text-al=
+ign:left"><img src=3D"cid:5fe1cbab6af7c5b5c192017ba39af415daada4f8@zimbra" =
+data-mce-src=3D"cid:5fe1cbab6af7c5b5c192017ba39af415daada4f8@zimbra"></p></=
+div></div></div></div></div></div></div></div></div></div></div></div></div=
+></div></div></div></div></div></div></div></div></div></div></div></div></=
+div></div></div></div></div></div></div></div></div></div></div></div></div=
+></div></div></div></div></div></div></div></div></div></div></div></div></=
+div></div></div></div></div></div></div></div></div></div></div></div></div=
+></div></div></div></div></div></div></div></div></div></div></div></div></=
+div></div></div></div></div></div></div></div></div></div></div></div></div=
+></div></div></div></div></div></div></div></div></div></div></div></div></=
+div></div></div></div></div></div></div></div></div></div></div></div></div=
+></div></div></div></div></div></div></div></div></div></div></div></div></=
+div></div></div></div></div></div></div></div></div></div></div></div></div=
+></div></div></div></div></div></div></div></div></div></div></div></div></=
+div></div></div></div></div></div></div></div></div></div></div></div></div=
+></div></div></div></div></div></div></div></div></div></div></div></td></t=
+r></tbody></table></div></div></div></div></div></div></div></div></div></d=
+iv><div align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff=
+"><div align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"=
+><div align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff">=
+<div align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><=
+div align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><d=
+iv align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><di=
+v align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div=
+ align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div =
+align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div a=
+lign=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div al=
+ign=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div ali=
+gn=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div alig=
+n=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div align=
+=3D"justify"><div align=3D"justify"><div align=3D"justify"><div align=3D"ju=
+stify"><div align=3D"justify"><div align=3D"justify"><div align=3D"justify"=
+><div align=3D"justify"><div align=3D"justify"><div align=3D"justify"><div =
+align=3D"justify"><div align=3D"justify"><div align=3D"justify"><div align=
+=3D"justify"><div align=3D"justify"><div align=3D"justify"><div align=3D"ju=
+stify"><div align=3D"justify"><div align=3D"justify"><div align=3D"justify"=
+><div align=3D"justify"><div style=3D"text-align:justify;text-indent:0px;ba=
+ckground-color:#ffffff"><div style=3D"text-align:justify;text-indent:0px;ba=
+ckground-color:#ffffff"><div style=3D"text-align:left;text-indent:0px;backg=
+round-color:#ffffff"><div style=3D"text-align:left;text-indent:0px;backgrou=
+nd-color:#ffffff"><div style=3D"background-color:#ffffff"><div style=3D"tex=
+t-align:justify;text-indent:0px;background-color:#ffffff"><div align=3D"jus=
+tify" style=3D"text-indent:0px;background-color:#ffffff"><div align=3D"just=
+ify" style=3D"text-align:justify;text-indent:0px;background-color:#ffffff">=
+<div align=3D"justify" style=3D"text-align:justify;text-indent:0px;backgrou=
+nd-color:#ffffff"><div style=3D"text-align:justify;text-indent:0px;backgrou=
+nd-color:#ffffff"><div style=3D"text-align:left;text-indent:0px;background-=
+color:#ffffff"><div style=3D"text-align:left;text-indent:0px;background-col=
+or:#ffffff"><div style=3D"background-color:#ffffff"><div align=3D"justify">=
+<div align=3D"justify"><div align=3D"justify"><div align=3D"justify"><div a=
+lign=3D"justify"><div align=3D"justify"><div style=3D"text-align:justify;te=
+xt-indent:0px;background-color:#ffffff"><div style=3D"text-align:justify;te=
+xt-indent:0px;background-color:#ffffff"><div style=3D"text-align:left;text-=
+indent:0px;background-color:#ffffff"><div style=3D"text-align:left;text-ind=
+ent:0px;background-color:#ffffff"><div style=3D"background-color:#ffffff"><=
+div style=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><=
+div align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><d=
+iv align=3D"justify" style=3D"text-align:justify;text-indent:0px;background=
+-color:#ffffff"><div align=3D"justify" style=3D"text-align:justify;text-ind=
+ent:0px;background-color:#ffffff"><div align=3D"justify" style=3D"text-alig=
+n:justify;text-indent:0px;background-color:#ffffff"><div align=3D"justify" =
+style=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div =
+style=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div =
+style=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div =
+style=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div =
+style=3D"text-align:justify;text-indent:0px"><div style=3D"text-align:justi=
+fy;text-indent:0px;background-color:#ffffff"><div style=3D"text-align:justi=
+fy;text-indent:0px;background-color:#ffffff"><div style=3D"text-align:justi=
+fy;text-indent:0px"><div style=3D"text-align:justify;text-indent:0px;backgr=
+ound-color:#ffffff"><div style=3D"text-align:justify;text-indent:0px"><div =
+style=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div =
+style=3D"text-align:justify;text-indent:0px"><div style=3D"text-align:justi=
+fy;text-indent:0px;background-color:#ffffff"><div style=3D"text-align:justi=
+fy;text-indent:0px"><div style=3D"text-align:justify;text-indent:0px;backgr=
+ound-color:#ffffff"><div style=3D"text-align:justify;text-indent:0px"><div =
+style=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div =
+style=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div =
+style=3D"text-align:justify;text-indent:0px"><div style=3D"text-align:justi=
+fy;text-indent:0px;background-color:#ffffff"><div style=3D"text-align:justi=
+fy;text-indent:0px"><div style=3D"text-align:justify;text-indent:0px;backgr=
+ound-color:#ffffff"><div align=3D"justify" style=3D"text-indent:0px;backgro=
+und-color:#ffffff"><div align=3D"justify"><div align=3D"justify" style=3D"t=
+ext-indent:0px;background-color:#ffffff"><div align=3D"justify"><div align=
+=3D"justify"><div align=3D"justify"><div align=3D"justify"><div align=3D"ju=
+stify"><div align=3D"justify"><div align=3D"justify"><div align=3D"justify"=
+><div align=3D"justify"><div align=3D"justify"><div align=3D"justify"><div =
+align=3D"justify"><div align=3D"justify"><div align=3D"justify"><div align=
+=3D"justify"><div align=3D"justify"><div align=3D"justify"><div style=3D"te=
+xt-align:justify;text-indent:0px;background-color:#ffffff"><div style=3D"te=
+xt-align:justify;text-indent:0px;background-color:#ffffff"><div style=3D"te=
+xt-align:left;text-indent:0px;background-color:#ffffff"><div style=3D"text-=
+align:left;text-indent:0px;background-color:#ffffff"><div style=3D"backgrou=
+nd-color:#ffffff"><div style=3D"text-align:justify;text-indent:0px;backgrou=
+nd-color:#ffffff"><div align=3D"justify" style=3D"text-indent:0px;backgroun=
+d-color:#ffffff"><div align=3D"justify" style=3D"text-align:justify;text-in=
+dent:0px;background-color:#ffffff"><div align=3D"justify" style=3D"text-ali=
+gn:justify;text-indent:0px;background-color:#ffffff"><div style=3D"text-ali=
+gn:justify;text-indent:0px;background-color:#ffffff"><div style=3D"text-ali=
+gn:left;text-indent:0px;background-color:#ffffff"><div style=3D"text-align:=
+left;text-indent:0px;background-color:#ffffff"><div style=3D"background-col=
+or:#ffffff"><div align=3D"justify"><div align=3D"justify"><div align=3D"jus=
+tify"><div align=3D"justify"><div align=3D"justify"><div align=3D"justify">=
+<div style=3D"text-align:justify;text-indent:0px;background-color:#ffffff">=
+<div style=3D"text-align:justify;text-indent:0px;background-color:#ffffff">=
+<div style=3D"text-align:left;text-indent:0px;background-color:#ffffff"><di=
+v style=3D"text-align:left;text-indent:0px;background-color:#ffffff"><div s=
+tyle=3D"background-color:#ffffff"><div style=3D"text-align:justify;text-ind=
+ent:0px;background-color:#ffffff"><div align=3D"justify" style=3D"text-inde=
+nt:0px;background-color:#ffffff"><div align=3D"justify" style=3D"text-align=
+:justify;text-indent:0px;background-color:#ffffff"><div align=3D"justify" s=
+tyle=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div a=
+lign=3D"justify" style=3D"text-align:justify;text-indent:0px;background-col=
+or:#ffffff"><div align=3D"justify" style=3D"text-align:justify;text-indent:=
+0px;background-color:#ffffff"><div style=3D"text-align:justify;text-indent:=
+0px;background-color:#ffffff"><div style=3D"text-align:justify;text-indent:=
+0px;background-color:#ffffff"><div style=3D"text-align:justify;text-indent:=
+0px;background-color:#ffffff"><div style=3D"text-align:justify;text-indent:=
+0px"><div style=3D"text-align:justify;text-indent:0px;background-color:#fff=
+fff"><div style=3D"text-align:justify;text-indent:0px;background-color:#fff=
+fff"><div style=3D"text-align:justify;text-indent:0px"><div style=3D"text-a=
+lign:justify;text-indent:0px;background-color:#ffffff"><div style=3D"text-a=
+lign:justify;text-indent:0px"><div style=3D"text-align:justify;text-indent:=
+0px;background-color:#ffffff"><div style=3D"text-align:justify;text-indent:=
+0px"><div style=3D"text-align:justify;text-indent:0px;background-color:#fff=
+fff"><div style=3D"text-align:justify;text-indent:0px"><div style=3D"text-a=
+lign:justify;text-indent:0px;background-color:#ffffff"><div style=3D"text-a=
+lign:justify;text-indent:0px"><div style=3D"text-align:justify;text-indent:=
+0px;background-color:#ffffff"><div style=3D"text-align:justify;text-indent:=
+0px;background-color:#ffffff"><div style=3D"text-align:justify;text-indent:=
+0px"><div style=3D"text-align:justify;text-indent:0px;background-color:#fff=
+fff"><div style=3D"text-align:justify;text-indent:0px"><div style=3D"text-a=
+lign:justify;text-indent:0px;background-color:#ffffff"><div align=3D"justif=
+y" style=3D"text-indent:0px;background-color:#ffffff"><div align=3D"justify=
+" style=3D"text-indent:0px;background-color:#ffffff"><div align=3D"justify"=
+ style=3D"text-indent:0px;background-color:#ffffff"><div align=3D"justify" =
+style=3D"text-indent:0px;background-color:#ffffff"><div align=3D"justify" s=
+tyle=3D"text-indent:0px;background-color:#ffffff"><div align=3D"justify" st=
+yle=3D"text-indent:0px;background-color:#ffffff"><div align=3D"justify"><di=
+v align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div=
+ align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div =
+align=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div a=
+lign=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div al=
+ign=3D"justify" style=3D"text-indent:0px;background-color:#ffffff"><div ali=
+gn=3D"justify"><div style=3D"text-align:justify;text-indent:0px"><div style=
+=3D"text-indent:0px;background-color:#ffffff;text-align:center"><div style=
+=3D"text-align:justify;text-indent:0px;background-color:#ffffff"><div style=
+=3D"text-indent:0px;background-color:#ffffff"><a name=3D"_GoBack"></a><br><=
+br><br><br style=3D"color:#000000;font-family:'helvetica' , sans-serif;font=
+-size:12pt"></div></div></div></div></div></div></div></div></div></div></d=
+iv></div></div></div></div></div></div></div></div></div></div></div></div>=
+</div></div></div></div></div></div></div></div></div></div></div></div></d=
+iv></div></div></div></div></div></div></div></div></div></div></div></div>=
+</div></div></div></div></div></div></div></div></div></div></div></div></d=
+iv></div></div></div></div></div></div></div></div></div></div></div></div>=
+</div></div></div></div></div></div></div></div></div></div></div></div></d=
+iv></div></div></div></div></div></div></div></div></div></div></div></div>=
+</div></div></div></div></div></div></div></div></div></div></div></div></d=
+iv></div></div></div></div></div></div></div></div></div></div></div></div>=
+</div></div></div></div></div></div></div></div></div></div></div></div></d=
+iv></div></div></div></div></div></div></div></div></div></div></div></div>=
+</div></div></div></div></div></div></div></div></div></div></div></div></d=
+iv></div></div></div></div></div></div></div></div></div></div></div></div>=
+</div></div></div></div></div></div></div></div></div></div></div></div></d=
+iv></div></div></div></div></div></div></div></div></div></div></div></div>=
+</div></div></div></div></div></div></div></div></div></div></div></div></d=
+iv></div></div></div></div></div></div></div><br></div></div></body></html>
+--=_769fab57-a35b-4e31-995b-c3d1e28d0b1f
+Content-Type: image/png; name=1.png
+Content-Disposition: inline; filename=1.png
+Content-Transfer-Encoding: base64
+Content-ID: <5fe1cbab6af7c5b5c192017ba39af415daada4f8@zimbra>
+
+iVBORw0KGgoAAAANSUhEUgAAAEgAAABGCAYAAABv59I3AABBqHpUWHRSYXcgcHJvZmlsZSB0eXBl
+IGV4aWYAAHjarZ1tkuQ6jmX/axW9BPGbXA5FSmazg1n+nEPPeq+rurrNZmwyq15mRnjIJRK4uBcA
+4df7v//Xd/3Hf/xHyDXEK5fW66j15lceecTJX/r9+/X7M9z5/Pf8yv/4Xvjnr1+5/vlG5EuJP9Pv
+n/X98/rJ18vfP9Dyn68///z1q60/1+l/LvTnG/+4YPKdI3/587r+50Ip/r4e/vz7Gn9+bub/9Dh/
+/l/Xfe437D93+S//zo3F2IXrpXjFN4V089/suyTuII00+bPx35hy9Cs3f8/n6zm1f792119//ZfF
++/q/X7t7/nlF+ueluO5/LHb9lzX68/VQ/v3anRX6z3cU/vHX+M/f+N7zEH//+k9r9327f9/7e7qZ
+KytVrz8Pdf+5xPkbL3xYynR+rPK78f/C39v5PfjdecTFjm128+H3usIIkdX8Qg47zPCF9/y5wuIW
+c3xj488YV0znaz21OOI6m5L9Hb7Y2IZ9pc7eLHYt8eX4172E877jvN8KnXfegVfGwMUCP/Fffl//
+7ov/L7//utD3abohnMXsZ624r6hNcxvunP/lVWxI+P6saTnre35ff23r37/c2MQOlrPMnQec9/O7
+xFPC37aVzj4nXlfufN0/1wht/7kAS8R7F24mJHbgriGVUMPdYmwhsI6d/ZncuWb/sAOhlLjD9bE3
+KVU2p0ffm59p4bw2lvj7MtDCRpRUcZuuo7BZORfsp+WODc2SSr5KKbW00ssos6aaa6m1tipGzZZa
+bqXV1lpvo82eeu6l195676PPEUcCwsqoo12jjzHm5E0nl5789OQVcz7xSU9+ylOf9vRnPHNhPiuv
+supqq6+x5o47bdx/192u3ffY8w0vpvTmt7z1bW9/xzs/bO1LX/7KV7/29W98869d+7Or/7xr4V92
+7n/etfBn19yxfF7X/t41vtzaPy4RhJPinrFjMQd2vLkDGHR0z+4eco7unHt2j4hTlMiuheLm7OCO
+sYP5DbF84a+9+3vn/sd9u0r+v9q3+N/t3OXW/f/Yucut+7Nz/3Xf/s2u7XkiSjobpBe6pnf6ADZe
+8PYZ+zQm/dc/uZ2VPhZut7RK+mr/3lWf8D2l7fHUbzzfs/OV9/M8qX/PWil9LXMHeYb49PHw5Hv0
+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
+--=_769fab57-a35b-4e31-995b-c3d1e28d0b1f--
+
+--=_74590296-b088-4c7a-bd4e-393f4dec7f1f--
+
+------=_Part_14895808_305237154.1706527630451
+Content-Type: text/plain; name=IOC_Adv2024Jan072.txt
+Content-Disposition: attachment; filename=IOC_Adv2024Jan072.txt
+Content-Transfer-Encoding: base64
+
+SU9DczotDQoNCklQczotDQoNCjgwLjk0LjkyLjMzDQoxNzguMTI4LjIyOC4yMzcNCjc3Ljc3LjIy
+Mi4zNw0KMTc5LjQzLjE3MC4yMTgNCjIwNi4xODkuMTIzLjExDQoyMTYuMTMxLjExNC4xMDMNCjE5
+My4zMi4xNjIuMTU3DQoyMTIuMTAyLjQxLjM3DQoxNDMuMTk4LjU5LjEyDQoxNTkuMjAzLjguMjMw
+DQo2NS40OS4xLjg3DQo1MS4yNTIuMjguMjM1DQoxNjUuMjIuNC4xNjkNCjEwMy4xODcuMTkxLjI0
+NA0KNS4yNTUuMTE1LjU4DQoxNDYuMTkwLjgxLjE2MA0KMjAxLjE0NC4xMTkuNTINCjEwNC4xNjgu
+NTcuMTg2DQoxNjcuMTcyLjg5LjI0OA0KMTAzLjIzMS4xNzIuOTgNCjIwNS4yMzQuMjEuOTINCjEw
+Mi4xNzYuMjM5LjQyDQoxMjQuNDMuNi4xOQ0KMTU2LjE0Ni4zNi4yMTQNCjE1NC4xNi40OS40Nw0K
+NjUuNDkuMS4yMg0KNjUuNDkuMi4xNw0KMTIyLjI1Mi4yMzAuMzQNCjE2Mi4yNDAuMjM5Ljk4DQo2
+Ni4xMTUuMTQyLjE1NA0KMjEyLjEwMi4zNS4yMjcNCjY1LjQ5LjEuMTA4DQo2NS40OS4xLjY4DQo2
+NS40OS4xLjY2DQo2NS40OS4xLjcyDQo2NS40OS4xLjc1DQo2NS40OS4xLjExNw0KNjUuNDkuMS4x
+MTgNCjE1NC4xNjAuMjMuMjEzDQoyMDIuOTUuNi4xNQ0KMTk0LjIzMy42Ny4xMzkNCjEzOC42OC4y
+MDguNDANCjEzNy4xODQuMTQ3Ljg3DQo1LjQyLjkyLjg4DQoxNDMuMTk4LjE2OS4xNDINCjEwNy4x
+NzAuMjMwLjIxDQoxNDEuOTguNi4zMQ0KOTQuNzQuMTE1LjIzDQoxNDMuMTk4LjIxMS41MQ0KMTU3
+LjI0NS4xNTkuNjINCjcyLjUyLjg3LjQwDQo2NS40OS4xLjI2DQoxMDcuMTcwLjIzNi40MQ0KMTM5
+LjE0NC4xNzYuMjMzDQoxMTQuMTE5LjEzMy43OA0KMTk4LjE5OS4xMTEuMTczDQoxMTQuMTE5LjE1
+MS4xNzANCjIwNi4xODkuODkuMTI5DQoxNDYuODguMjQwLjg0DQoxNDYuMTkwLjE1OS4xNzENCjEz
+OC42OC4yMDguNDgNCjE2Mi4yMTYuMTQ5LjE2MQ0KNDUuMTU2LjEyOC44DQo3Ni4xNjkuMzYuNzMN
+CjY0LjIyNS45MS43Mw0KMTM1LjE0OC42OS4yMzENCjE3MC4xODcuMjMxLjE1DQoyMTcuMTY1LjEw
+OS4xODcNCjE0Mi4xOTguMTIzLjMzDQoyMTIuODMuOC43Ng0KNjguMTgzLjIwMy44OQ0KNS4yMjgu
+MjQ5LjE1NA0KNjAuMjA5LjM4LjIxMA0KODAuMjEuMjA4Ljk0DQoyMTEuMjI4LjExMy4yNw0KNjUu
+MTA4LjE1Ni4zOQ0KMTU5LjIyMy42MS4yNDMNCjE4OC4xMTQuOTcuMg0KMTg1LjU0LjIzMS41Mg0K
+MTkyLjE1NS44NC4xOTQNCjE2Mi4yNDAuNTEuMTg1DQoxOTQuMTg3LjE3Ni4yMjUNCjExNC4xMTku
+MTUzLjI0Mg0KMTYyLjI0MC4yMzUuNDcNCjc5LjEyNC41OC43OA0KNDUuMTU2LjEyOS4xMQ0KMTg0
+LjE2OC4xMjYuNjUNCjU4LjM0LjE3Ni44Mg0KMTg3LjIzNy40Ny4yMTQNCjIxOS4xMDAuMzcuMjQz
+DQoxMTMuMTQwLjg0Ljg2DQoxMjMuMTM4LjE5OS42Ng0KMTg4LjE2NS44Ny45OA0KMTk2LjE4OC4x
+MjAuMjI5DQo4Ni45OS4xNC40Ng0KMTA5LjQwLjI0MS4yNDMNCjIyMi4xMTcuNTQuMTk4DQoxNzgu
+MjE2LjE2NS4xODcNCjE0OC4xMjIuMTg3LjINCjIxOC4xNTAuNi4xMDANCjQ1LjE2Mi4xODMuMTYw
+DQoyMDMuOTkuMTAwLjgxDQoxNzkuNDMuMTkxLjE2Mg0KNDUuMTU2LjEyOC4xMA0KNTEuNzkuMTku
+NTMNCjEwMy4xMjUuMjM1LjI0DQo0NS4xNTYuMTI4LjI3DQo4Mi4yMDcuMjQwLjEyNw0KMTkzLjMy
+LjE2Mi4xODgNCjExNy41Mi45Ni45OQ0KNDUuMjI3LjI1NC40OQ0KMTAxLjQzLjIxNC4xNDQNCjkx
+LjIwNy41Ny4xMTUNCjE2OS4yNTQuMjUyLjI0OQ0KNDMuMTM0LjIyNC4yMTgNCjg4LjIxNC4yNS4x
+Ng0KMTA3LjE1MC4xMTcuMTAzDQoxOTUuMTIzLjIyNS45OA0KMTM0LjIwOS45OC45Mg0KMTM4LjE5
+Ny4xNTYuMTA5DQoxNjEuMzUuNTUuNjgNCjEwNi4yMTUuODIuMTENCjEwOS4yMDUuMjEzLjEzNA0K
+MTg1Ljk0LjI5LjY2DQoxOTguMTk5LjExNC42Mg0KNDMuMTM0LjEyOS4xMTENCjQzLjE2My4yNDEu
+MTI2DQo4Ny4xMTYuMjMuNTANCjE1OS4yMjMuNzUuMTM2DQo0Ny43NC45MC4xMjcNCjQzLjE1My4y
+MTUuMTc1DQo3OS4xMTAuNDguMTk0DQoxMDcuMTcwLjIzMC4yMQ0KMTU5LjIwMy4yMjQuMjINCjE0
+Ni4xOTAuMTM0LjIzNA0KMTEzLjk4LjExNS40NQ0KMjEyLjE4MS4zMy4xNDYNCjYxLjc5LjIyNS4x
+MzUNCjQ2LjE2MC4yNDQuMTI2DQo4NS4yNS4xMzguMjkNCjE2Ny45OS4xMDQuMzgNCjE2NC45Mi4y
+MTcuMTg4DQoxNDEuOTguMTEuMTA4DQo2NS4xMDguMjM1LjQwDQoxMjguMTk5LjE0OC4yNw0KNjUu
+MTA5LjEyNi4xNTgNCjg5LjM5LjcxLjI1Mw0KNS4xODAuNDQuMzINCjUuMTgwLjQ0LjYyDQo1LjE4
+MC40NC42MQ0KNS4xODAuNDQuMTAyDQo1LjE4MC40NC4zNA0KNS4xODAuNDQuNjQNCjUuMTgwLjQ0
+LjEwNA0KNjQuMjI3LjE2Mi4yMDUNCjEwMy4zNi4yNC4xNw0KMTAzLjM2LjI0LjE5DQoxMDMuMzYu
+MjQuMjANCjEwMy4zNi4yNC4xOA0KODQuNTQuNTEuMjQ2DQoxODUuMjI1Ljc1LjI0Mg0KMTcwLjY0
+LjE0OS4xNjMNCjE1OS4yMDMuMzYuMjE2DQo1MC4zMS4yMS4xMA0KNDUuMTQ3LjIyOS4xMjkNCjEz
+LjUxLjcwLjEwDQoxMjguMTk5LjIyNy4zNA0KMTcwLjY0LjE1Ni45Ng0KMjEzLjEwOS4yMDIuMTUy
+DQo2OC4xODMuMTk5LjM0DQo5NC4xMDIuNTcuMTUyDQo4OS40MC4yMjcuMjQyDQoxMDMuMTQ5LjI0
+OS4yMzENCjEyMi4xNzYuMTE4LjEyMw0KNDUuMTUxLjE2Ny4xMA0KMTAzLjg3LjI2LjcwDQoyMDku
+MTQxLjM5LjE5Nw0KMjIyLjI0My4zLjg4DQo1OS44OC4yMjYuOA0KMTE3LjE5OS44NS43OQ0KOTMu
+MTIzLjg1LjEyNA0KNDUuNTYuNzcuMjExDQozNS4yMDMuMjEwLjUNCjExNy4yMTkuMTI1LjEwDQo1
+OS45OS4xMzguODINCjk0Ljc1LjEwMy41NA0K
+------=_Part_14895808_305237154.1706527630451
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+
+
+------=_Part_14895808_305237154.1706527630451--
+
+
+
+------=_20240129180153_14842--
+
+
+
+--=_ytMAYmo5i9YgINWeFtPKvZs--
+
